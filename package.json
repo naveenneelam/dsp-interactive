@@ -1,0 +1,23 @@
+{
+  "name": "dsp-interactive",
+  "version": "1.0.0",
+  "description": "Interactive companion course for Smith's Guide to Digital Signal Processing",
+  "type": "module",
+  "private": true,
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test tests/unit.test.js",
+    "test:e2e": "node tests/e2e.mjs"
+  },
+  "keywords": ["DSP", "education", "interactive", "signal-processing"],
+  "license": "MIT",
+  "dependencies": {
+    "katex": "^0.19.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.1"
+  }
+}
