@@ -24,6 +24,8 @@ const rows = chapters.flatMap((ch) => ch.sections.map((s) => ({
   keyPoints: (s.keyPoints || []).length,
   lab: ch.labs[0]?.title || '—',
   labRelevant: labRelevant(s),
+  figure: s.visual?.title || '—',
+  figureKind: s.visual?.kind || '—',
   quiz: ch.quiz.length,
   status: statusOf(s),
   words: `${s.intuition} ${s.detail}`.trim().split(/\s+/).filter(Boolean).length,
@@ -42,6 +44,7 @@ Source: Steven W. Smith, *The Scientist and Engineer's Guide to Digital Signal P
 - **Formulas:** ${rows.reduce((n, r) => n + r.formulas, 0)}
 - **Practice questions:** ${chapters.reduce((n, c) => n + c.quiz.length, 0)}
 - **Interactive labs:** ${chapters.reduce((n, c) => n + c.labs.length, 0)}
+- **Sections with a figure:** ${rows.filter((r) => r.figure !== '—').length}/${rows.length}
 
 ## Chapter inventory
 
@@ -53,9 +56,9 @@ ${chapters.map((c) => `| ${c.number} | ${c.title.replace(/\|/g, '\\|')} | ${c.pa
 
 Each section id is stable and used by the app, the traceability matrix, quizzes, and the progress store.
 
-| ID | Concept | Book p. | PDF p. | Level | Words | Formulas | Key points | Lab route | Status |
-|---|---|---|---:|---:|---|---:|---:|---:|---|---|
-${rows.map((r) => `| ${r.id} | ${r.title.replace(/\|/g, '\\|')} | ${r.bookPage} | ${r.pdfPage} | ${r.level} | ${r.words} | ${r.formulas} | ${r.keyPoints} | ${r.labRelevant ? r.lab.replace(/\|/g, '\\|') : 'Explanation-only'} | ${r.status} |`).join('\n')}
+| ID | Concept | Book p. | PDF p. | Level | Words | Formulas | Key points | Figure | Lab route | Status |
+|---|---|---|---:|---:|---|---:|---:|---:|---|---|---|
+${rows.map((r) => `| ${r.id} | ${r.title.replace(/\|/g, '\\|')} | ${r.bookPage} | ${r.pdfPage} | ${r.level} | ${r.words} | ${r.formulas} | ${r.keyPoints} | ${r.figure.replace(/\|/g, '\\|')} | ${r.labRelevant ? r.lab.replace(/\|/g, '\\|') : 'Explanation-only'} | ${r.status} |`).join('\n')}
 
 ## Prerequisite map
 
@@ -83,11 +86,11 @@ Every extracted source section is listed below with its printed book page, PDF p
 - **Partial** — explanation exists but a significant source detail is unresolved.
 - **Blocked** — source is unreadable or ambiguous.
 
-**Current totals:** ${full} Full, ${explain} Explanation-only, 0 Partial, 0 Blocked.
+**Current totals:** ${full} Full, ${explain} Explanation-only, 0 Partial, 0 Blocked. Every section has a figure: ${rows.filter((r) => r.figure !== '—').length}/${rows.length}.
 
-| Ch. | Section | Concept | Book p. | PDF p. | Explanation | Visual route | Practice | Status |
-|---:|---|---|---:|---:|---|---|---|---|
-${rows.map((r) => `| ${r.chapter} | ${r.id} | ${r.title.replace(/\|/g, '\\|')} | ${r.bookPage} | ${r.pdfPage} | Authored (${r.words} words, ${r.formulas} formulas) | ${r.labRelevant ? r.lab.replace(/\|/g, '\\|') : '—'} | ${r.quiz} chapter questions | ${r.status} |`).join('\n')}
+| Ch. | Section | Concept | Book p. | PDF p. | Explanation | Figure | Visual route | Practice | Status |
+|---:|---|---|---:|---:|---|---|---|---|---|
+${rows.map((r) => `| ${r.chapter} | ${r.id} | ${r.title.replace(/\|/g, '\\|')} | ${r.bookPage} | ${r.pdfPage} | Authored (${r.words} words, ${r.formulas} formulas) | ${r.figure.replace(/\|/g, '\\|')} | ${r.labRelevant ? r.lab.replace(/\|/g, '\\|') : '—'} | ${r.quiz} chapter questions | ${r.status} |`).join('\n')}
 
 ## Verification method
 
@@ -95,7 +98,7 @@ ${rows.map((r) => `| ${r.chapter} | ${r.id} | ${r.title.replace(/\|/g, '\\|')} |
 2. **Content validator:** \`validateContent()\` reports ${v.missing.length} missing sections, ${v.tooShort.length} sections under 35 words, and ${v.extras.length} extra IDs.
 3. **Formula validation:** every formula is rendered through KaTeX with \`throwOnError\`; 0 errors.
 4. **Numerical tests:** 28 unit tests cover DFT/FFT, convolution, filters, quantization, compression, DCT/JPEG, CT, and 2-D FFT.
-5. **Browser tests:** 69 checks cover all 33 labs, every chapter, quizzes, persistence, search, themes, and mobile layout; 0 failures.
+5. **Browser tests:** 82 checks cover all 33 chapters, all 35 labs, every chapter's figures and viewer, quizzes, persistence, search, the source reader, themes, and mobile layout; 0 failures.
 6. **Manual review:** screenshots and spot checks of each lab's readouts and interaction effects.
 
 ## Known omissions and limitations

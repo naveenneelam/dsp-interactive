@@ -426,6 +426,15 @@ This chapter is the practical heart of the analog–digital interface. It explai
         'Lower the sampling rate until the reconstruction fails. Identify the exact Nyquist boundary.',
         'Reduce the bit depth to 4. Compare the staircase, the error waveform, and the measured SNR with 6.02N+1.76 dB.',
       ],
+    }, {
+      id: 'sigma-delta',
+      title: 'Single-bit sigma-delta conversion',
+      intro: 'A one-bit feedback loop trades amplitude resolution for speed. See the bitstream, the shaped noise, and the digital decimation that recovers the waveform.',
+      tasks: [
+        'Increase the oversampling ratio. What happens to the in-band noise?',
+        'Compare first and second order. Where is the noise pushed?',
+        'Raise the input amplitude toward full scale. When does the modulator overload?',
+      ],
     }],
     worked: {
       title: 'Choosing an ADC for a vibration sensor',

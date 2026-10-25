@@ -56,14 +56,16 @@ try {
     assert.match(await page.locator('h1').first().innerText(), /See the signal/);
     assert.equal(await page.locator('#top-progress-text').innerText(), '0%');
   });
-  await step('content validator reports 185 sections and 33 labs', async () => {
+  await step('content validator reports 185 sections, 35 labs, and 185 figures', async () => {
     const v = await page.evaluate(() => window.__dsp.validateContent());
     assert.equal(v.chapters, 33);
     assert.equal(v.sections, 185);
     assert.deepEqual(v.missing, []);
     assert.deepEqual(v.tooShort, []);
     assert.deepEqual(v.extras, []);
-    assert.equal(v.labs, 33);
+    assert.deepEqual(v.missingVisuals, []);
+    assert.equal(v.figures, 185);
+    assert.equal(v.labs, 35);
     assert.equal(v.quizzes, 100);
   });
   await step('source PDF is served', async () => {
@@ -74,7 +76,7 @@ try {
   await page.screenshot({ path: `${shots}/01-home.png` });
 
   console.log('\nEvery chapter renders and every lab starts');
-  const chapters = await page.evaluate(() => window.__dsp.chapters.map((c) => ({ n: c.number, title: c.title, sections: c.sections.length, quiz: c.quiz.length, lab: c.labs[0]?.id })));
+  const chapters = await page.evaluate(() => window.__dsp.chapters.map((c) => ({ n: c.number, title: c.title, sections: c.sections.length, quiz: c.quiz.length, lab: c.labs[0]?.id, labs: c.labs.length })));
   for (const ch of chapters) {
     await step(`chapter ${ch.n}: ${ch.title}`, async () => {
       await page.goto(`${BASE}/#/chapter/${ch.n}`, { waitUntil: 'domcontentloaded' });
@@ -82,15 +84,28 @@ try {
       assert.equal(await page.locator('.concept-card').count(), ch.sections);
       await page.goto(`${BASE}/#/chapter/${ch.n}/lab`, { waitUntil: 'domcontentloaded' });
       await page.waitForSelector('.lab-card', { timeout: 10000 });
-      assert.equal(await page.locator('.lab-card').count(), 1);
-      assert.ok((await page.locator('.lab-card canvas').count()) >= 1, 'lab has a canvas');
-      assert.ok(!/unavailable|error/i.test(await page.locator('.lab-head h2').innerText()));
+      assert.equal(await page.locator('.lab-card').count(), ch.labs);
+      assert.ok((await page.locator('.lab-card canvas').count()) >= ch.labs, 'each lab has a canvas');
+      assert.ok(!/unavailable|error/i.test(await page.locator('.lab-head h2').first().innerText()));
       const w = await page.locator('.lab-card canvas').first().evaluate((c) => c.width);
       assert.ok(w > 0, 'canvas has a backing width');
     });
   }
   await page.goto(`${BASE}/#/chapter/3/lab`, { waitUntil: 'networkidle' });
   await page.screenshot({ path: `${shots}/02-lab-sampling.png` });
+  await page.goto(`${BASE}/#/chapter/3`, { waitUntil: 'networkidle' });
+  await step('every concept on a chapter has a figure', async () => {
+    assert.equal(await page.locator('.concept-figure').count(), 7);
+    assert.equal(await page.locator('.concept-figure img').count(), 7);
+  });
+  await step('figure opens in the image viewer', async () => {
+    await page.locator('.figure-open').first().click();
+    await page.waitForTimeout(120);
+    assert.equal(await page.locator('#image-modal').isVisible(), true);
+    assert.ok((await page.locator('#image-title').innerText()).length > 3);
+    await page.keyboard.press('Escape');
+  });
+  await page.screenshot({ path: `${shots}/02b-concept-figure.png` });
 
   console.log('\nQuiz, feedback, scoring, and persistence');
   await page.goto(`${BASE}/#/chapter/3/practice`, { waitUntil: 'networkidle' });
@@ -162,7 +177,7 @@ try {
     assert.equal(await page.locator('#search-modal').isHidden(), true);
     assert.match(page.url(), /#\/chapter\//);
   });
-  for (const [route, h1] of [['#/contents', 'The whole book, in order'], ['#/labs', 'Lab gallery'], ['#/map', 'Concept dependency map'], ['#/glossary', 'Glossary'], ['#/formulas', 'Formula sheet'], ['#/source', 'PDF-to-application coverage'], ['#/review', 'Review queue'], ['#/bookmarks', 'Bookmarks'], ['#/notes', 'Notes'], ['#/quiz', 'Practice and mastery checks']]) {
+  for (const [route, h1] of [['#/contents', 'The whole book, in order'], ['#/labs', 'Lab gallery'], ['#/visuals', 'Every figure, in one place'], ['#/map', 'Concept dependency map'], ['#/glossary', 'Glossary'], ['#/formulas', 'Formula sheet'], ['#/source', 'PDF-to-application coverage'], ['#/review', 'Review queue'], ['#/bookmarks', 'Bookmarks'], ['#/notes', 'Notes'], ['#/quiz', 'Practice and mastery checks']]) {
     await step(`reference route ${route}`, async () => {
       await page.goto(`${BASE}/${route}`, { waitUntil: 'networkidle' });
       assert.match(await page.locator('h1').first().innerText(), new RegExp(h1));
@@ -181,6 +196,34 @@ try {
   await step('source coverage has 33 chapter rows', async () => {
     await page.goto(`${BASE}/#/source`, { waitUntil: 'networkidle' });
     assert.equal(await page.locator('.trace-table tbody tr').count(), 33);
+  });
+  await step('visual index lists unique figures', async () => {
+    await page.goto(`${BASE}/#/visuals`, { waitUntil: 'networkidle' });
+    assert.equal(await page.locator('.visual-card').count(), 83);
+    assert.ok(await page.locator('.visual-card img').first().evaluate((img) => img.complete && img.naturalWidth > 0));
+  });
+  await step('visual index filters original diagrams and licensed images', async () => {
+    await page.locator('[data-visual-filter="image"]').click();
+    await page.waitForTimeout(100);
+    const visible = page.locator('.visual-card:visible');
+    const n = await visible.count();
+    assert.ok(n > 0 && n < 83, `expected a filtered subset, got ${n}`);
+    const kinds = await visible.evaluateAll((cards) => [...new Set(cards.map((c) => c.dataset.visualKind))]);
+    assert.deepEqual(kinds, ['image']);
+  });
+  await step('all local figures load', async () => {
+    const sources = await page.evaluate(() => [...new Set(window.__dsp.visualList.map((v) => v.src))]);
+    let bad = [];
+    for (const src of sources) {
+      const r = await page.request.get(`${BASE}/${src}`);
+      if (r.status() !== 200) bad.push(src);
+    }
+    assert.deepEqual(bad, []);
+  });
+  await step('source reader embeds the local PDF at a page', async () => {
+    await page.goto(`${BASE}/#/reader?page=73`, { waitUntil: 'domcontentloaded' });
+    assert.match(await page.locator('h1').first().innerText(), /Source reader/);
+    assert.match(await page.locator('#pdf-frame').getAttribute('src'), /#page=73/);
   });
   await step('theme toggles and persists', async () => {
     await page.goto(`${BASE}/#/home`, { waitUntil: 'networkidle' });
@@ -233,6 +276,21 @@ try {
     await page.waitForTimeout(200);
     assert.match(await page.locator('[data-readout="err"]').innerText(), /e-/);
   });
+  await step('sigma-delta lab reports a finite SNR and ENOB', async () => {
+    await page.goto(`${BASE}/#/chapter/3/lab`, { waitUntil: 'networkidle' });
+    const lab = page.locator('#lab-sigma-delta');
+    await lab.waitFor();
+    assert.match(await lab.locator('[data-readout="snr"]').innerText(), /dB/);
+    assert.match(await lab.locator('[data-readout="enob"]').innerText(), /bit/);
+  });
+  await step('biquad resonator becomes unstable past the unit circle', async () => {
+    await page.goto(`${BASE}/#/chapter/19/lab`, { waitUntil: 'networkidle' });
+    const lab = page.locator('#lab-resonator');
+    await lab.waitFor();
+    await lab.locator('#rq-r').evaluate((el) => { el.value = '1.03'; el.dispatchEvent(new Event('input', { bubbles: true })); });
+    await page.waitForTimeout(120);
+    assert.match(await lab.locator('[data-readout="stable"]').innerText(), /UNSTABLE/);
+  });
 
   console.log('\nResponsive and accessibility');
   await page.setViewportSize({ width: 390, height: 844 });
@@ -253,6 +311,11 @@ try {
   });
   await step('mobile chapter lab fits', async () => {
     await page.goto(`${BASE}/#/chapter/6/lab`, { waitUntil: 'networkidle' });
+    const fit = await page.evaluate(() => ({ sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth }));
+    assert.ok(fit.sw <= fit.cw + 1, JSON.stringify(fit));
+  });
+  await step('mobile concept figure fits', async () => {
+    await page.goto(`${BASE}/#/chapter/6`, { waitUntil: 'networkidle' });
     const fit = await page.evaluate(() => ({ sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth }));
     assert.ok(fit.sw <= fit.cw + 1, JSON.stringify(fit));
   });

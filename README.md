@@ -2,7 +2,7 @@
 
 An interactive, source-linked course for **Digital Signal Processing**, built around Steven W. Smith's *The Scientist and Engineer's Guide to Digital Signal Processing* (2nd ed., 688 pp.).
 
-The app covers all 33 chapters and all 185 source sections, with 33 interactive labs, 100 practice questions, 235 formulas, a glossary, a concept dependency map, bookmarks, notes, progress tracking, and a section-by-section traceability matrix.
+The app covers all 33 chapters and all 185 source sections, with 35 interactive labs, 185 section figures drawn from an 83-visual library, 100 practice questions, 235 formulas, a glossary, a concept dependency map, bookmarks, notes, progress tracking, and a section-by-section traceability matrix.
 
 > **Source-first, not a replacement.** The book is the primary source of truth. Explanations here are authored summaries grounded in its terminology and page references. Modern examples and some derivations are supplementary and are identified as such in the documentation. The book remains the authoritative text.
 
@@ -33,7 +33,7 @@ python -m http.server 4173
 |---|---|
 | `npm start` | Start the static server on port 4173 |
 | `npm run test:unit` | Run 28 numerical/algorithm tests with Node's test runner |
-| `npm run test:e2e` | Run 72 browser checks with Playwright/Chromium |
+| `npm run test:e2e` | Run 82 browser checks with Playwright/Chromium |
 | `npm test` | Run both suites |
 
 For the browser suite, install Chromium once if needed:
@@ -50,6 +50,8 @@ npx playwright install chromium
 
 - **Dashboard** with progress, continue-where-you-left-off, and all 33 chapters grouped into the book's five parts.
 - **Searchable contents** page with the complete part → chapter → section hierarchy, page numbers, and title/body filtering.
+- **Illustrated concepts:** every one of the 185 sections has a relevant figure, with a plain-language caption, source/license credit, and a click-to-enlarge viewer. The visual index collects the full 83-visual library.
+- **Source reader:** the user's local PDF opens in an embedded reader for side-by-side comparison with the authored explanations; the app never claims the book's figures as its own.
 - **Lab gallery** with every interactive visualization and its guided tasks.
 - **Chapter pages** with six tabs:
   - **Concepts** — intuition, technical detail, formulas, key points, caveats, source page badges, and per-section study tracking. A Guided/Technical depth switch changes progressive disclosure.
@@ -71,6 +73,7 @@ npx playwright install chromium
 | 1 | Signal chain | Sensor → anti-alias → ADC → DSP → DAC, aliasing and smoothing |
 | 2 | Noise and histograms | Uniform/Gaussian processes, sample statistics, pdf |
 | 3 | Sampling and quantization | Aliasing, sinc reconstruction, bit depth, SNR |
+| 3 | Sigma-delta single-bit conversion | Oversampling, noise shaping, decimation, ENOB |
 | 4 | Numerical precision | Float32/64, Q15, round-off growth, Kahan summation |
 | 5 | Linearity test | Superposition, clipping, squaring, median nonlinearity |
 | 6 | Convolution step-by-step | Flip/shift/overlap, input-side and output-side views |
@@ -87,6 +90,7 @@ npx playwright install chromium
 | 17 | Custom filters | Frequency sampling, deconvolution, regularization |
 | 18 | FFT convolution | Overlap-add, zero padding, wraparound |
 | 19 | Recursive filters | Single pole, cutoff, time constant, instability |
+| 19 | Biquad resonator | Pole radius, bandwidth, Q, ringing, stability |
 | 20 | Chebyshev | Ripple/order, Butterworth comparison, poles, overshoot |
 | 21 | Filter comparison | Four filters on one specification |
 | 22 | Audio | μ-law companding, uniform vs companded error, data rates |
@@ -125,20 +129,25 @@ dsp-interactive/
 │   ├── data/
 │   │   ├── source_index.js     extracted 33-chapter/185-section outline
 │   │   ├── traceability.json   machine-readable coverage matrix
+│   │   ├── visuals.js          visual registry, captions, chapter mapping
 │   │   └── glossary.js         90-term glossary
 │   └── viz/
 │       ├── plot.js             Canvas chart engine (themes, hover, log axes)
 │       ├── lab-kit.js          reusable lab scaffolding
-│       ├── labs-*.js           33 labs grouped by subject
+│       ├── labs-*.js           35 labs grouped by subject
 │       └── labs.js             registry
+├── assets/
+│   ├── img/                    downloaded, optimized, licensed images + credits.json
+│   └── diagrams/               49 original SVG diagrams
 ├── vendor/katex/               local KaTeX (offline equations)
 ├── source/Guide_to_Digital_Signal_Process.pdf   local source copy
 ├── tests/unit.test.js          28 unit tests
-├── tests/e2e.mjs               72 browser checks
-├── tools/                      source-index builder + doc exporter
+├── tests/e2e.mjs               82 browser checks
+├── tools/                      source-index builder, diagram/image generators, doc exporter
 ├── CONCEPT_INVENTORY.md
 ├── TRACEABILITY.md
 ├── COVERAGE.md
+├── ATTRIBUTIONS.md
 ├── TESTS.md
 └── README.md
 ```
@@ -179,6 +188,8 @@ Chapter metadata adds objectives, prerequisites, a lab, a worked example, miscon
 
 The source provides the chapter/section structure, terminology, equations, and key claims. Explanations are written for this course and page-referenced. Examples involving modern technology (5G, JPEG, machine learning, etc.) and some engineering guidance are supplementary context, not attributed to Smith. If a detail is not supported by the source, the app does not present it as source fact.
 
+**Images and copyright.** The book's prose and figures are copyrighted and are not reproduced. The app links to the user's local PDF for the original pages. The 34 downloaded photographs/diagrams are from Wikimedia Commons under the licenses shown in `ATTRIBUTIONS.md` and in each figure; the 49 technical diagrams are original work for this course under CC BY 4.0. Every displayed image is stored locally, credited, and can be enlarged. If you need the book's exact figure, follow the page link to the PDF.
+
 Known source ambiguities are recorded in the app's Source coverage page and in `COVERAGE.md`:
 
 - “Nyquist frequency” vs. “Nyquist rate” (the book uses both for half the sampling rate).
@@ -204,7 +215,7 @@ Known source ambiguities are recorded in the app's Source coverage page and in `
 
 ```bash
 npm run test:unit   # 28/28 passing
-npm run test:e2e    # 72/72 checks passing
+npm run test:e2e    # 82/82 checks passing
 ```
 
 The unit suite covers:
@@ -239,7 +250,9 @@ The browser suite checks every chapter and every lab, quiz feedback/scoring/pers
 
 ## Known limitations
 
-- **Depth varies.** All 185 sections have authored explanations, but the source is a 688-page book. Core chapters receive deeper treatment and more lab controls than support/context sections. See `COVERAGE.md` for the 27 explanation-only sections.
+- **Depth varies.** All 185 sections have authored explanations and a figure, but the source is a 688-page book. Core chapters receive deeper treatment and more lab controls than support/context sections. See `COVERAGE.md` for the 27 explanation-only sections, now all illustrated.
+- **Figures are illustrative, not the book's figures.** Every section has a relevant figure, but the same chapter-level visual can be reused across related sections; the 83-figure library supplies 185 section placements, with some reuse. Downloaded images are contextual illustrations from Wikimedia Commons, not the book's exact diagrams. Original diagrams are simplified educational models.
+- **No full-prose reproduction.** The book's copyrighted text and figures are not copied; the app links to the user's local PDF at the matching page.
 - **Heuristic concept mapping.** Quiz feedback suggests a related section using keyword overlap; it is a study aid, not a validated diagnostic model.
 - **Simplified simulations.** Labs use educational models (small CT grids, synthetic images, first/second-order filters, moving-average examples). Each lab note states its assumptions.
 - **No audio playback.** The audio lab visualizes companding and data rates; it does not stream sound. This avoids autoplay and codec dependencies.

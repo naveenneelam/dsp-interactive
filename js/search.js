@@ -18,7 +18,7 @@ export function buildIndex(chapters, glossary) {
       idx.push({
         type: 'concept', id: `sec-${s.id}`, chapter: ch.number, section: s.id,
         title: `${s.id} ${s.title}`,
-        body: `${s.intuition} ${s.detail} ${(s.keyPoints || []).join(' ')}`,
+        body: `${s.intuition} ${s.detail} ${(s.keyPoints || []).join(' ')} ${s.visual ? s.visual.title + ' ' + s.visual.caption : ''}`,
         href: `#/chapter/${ch.number}/learn/${s.id}`,
         scoreBase: 35,
       });

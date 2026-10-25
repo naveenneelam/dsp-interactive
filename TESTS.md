@@ -21,7 +21,7 @@ Actual result:
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 610.7322
+# duration_ms 573.3768
 ```
 
 ### What is covered
@@ -50,19 +50,21 @@ npm run test:e2e
 Actual result:
 
 ```
-72 checks passed, 0 failed.
+82 checks passed, 0 failed.
 ```
 
 The suite starts its own server on port 4180. It asserts:
 
 ### Content and dashboard
 - 33 chapter cards; hero renders.
-- `window.__dsp.validateContent()`: 33 chapters, 185 sections, 0 missing, 0 too short, 0 extra; 33 labs; 100 quizzes.
+- `window.__dsp.validateContent()`: 33 chapters, 185 sections, 0 missing, 0 too short, 0 extra; 185/185 sections illustrated; 35 labs; 100 quizzes.
 - Source PDF is served (HTTP 200, >1 MB).
+- All 83 unique figure sources load locally; the visual index exposes diagrams and licensed images with credits.
+- Every concept card has a figure and the full-screen image viewer opens.
 
 ### Every chapter and lab
 - For all 33 chapters: chapter page renders the expected number of concept cards.
-- For all 33 labs: one lab card, at least one canvas with non-zero backing width, no “unavailable/error” heading.
+- For all 35 labs across 33 chapters: the expected number of lab cards, at least one canvas with non-zero backing width, and no “unavailable/error” heading.
 - No console errors or page errors across the run.
 
 ### Quiz and persistence
@@ -76,7 +78,9 @@ The suite starts its own server on port 4180. It asserts:
 
 ### Search and reference
 - `/` opens search; “aliasing” returns results; selecting one closes the modal and navigates.
-- All reference routes render: contents, lab gallery, map, glossary, formulas, source, review, bookmarks, notes, assessments.
+- All reference routes render: contents, lab gallery, visual index, map, glossary, formulas, source, reader, review, bookmarks, notes, assessments.
+- The source reader embeds the user’s local PDF at the requested page.
+- The visual index filters 83 figures down to the 34 licensed images, and every visible card is that kind.
 - Formula filter reduces 235 items to >0 and <235 without navigating away.
 - Source coverage table has 33 chapter rows.
 - Theme toggle changes the theme and survives reload.
@@ -88,9 +92,11 @@ The suite starts its own server on port 4180. It asserts:
 - Perceptron: XOR dataset → 100% training accuracy with quadratic feature.
 - Circular buffer: Write button changes the writes readout.
 - Custom-filter deconvolution: recovery error is finite/scientific notation.
+- Sigma-delta: finite SNR/ENOB readouts.
+- Biquad resonator: pushing the pole radius above 1 marks the filter unstable.
 
 ### Responsive and accessibility
-- Mobile 390×844: no horizontal overflow on home, contents, lab gallery, formulas, or a chapter lab.
+- Mobile 390×844: no horizontal overflow on home, contents, lab gallery, formulas, a concept figure, or a chapter lab.
 - Mobile menu opens the sidebar; mobile search opens the search dialog.
 - Reduced-motion preference sets `data-reduced-motion="true"`.
 - Skip link and main landmark exist.

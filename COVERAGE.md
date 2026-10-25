@@ -17,10 +17,12 @@
 | Extra/unmatched section IDs | 0 |
 | Formula entries | 235 |
 | KaTeX rendering errors | 0 |
-| Interactive labs | 33 (one per chapter) |
+| Interactive labs | 35 across 33 chapters |
 | Practice questions | 100 |
 | Glossary terms | 90 |
 | Worked examples | 33 |
+| Section figures | **185 / 185 sections** |
+| Unique figures | 83 (49 original diagrams + 34 licensed images) |
 | Source traceability rows | 185 |
 | “Full” treatment | 158 |
 | “Explanation-only” treatment | 27 |
@@ -75,8 +77,11 @@ These are deliberately explanation-only; the chapter lab may still touch on adja
 
 ## 4. Visualizations and what they demonstrate
 
-The full list of 33 labs and their concepts is in `README.md` and on the dashboard. Coverage notes:
+The full list of 35 labs and their concepts is in `README.md` and on the dashboard. Coverage notes:
 
+- **Every section has a figure** (185/185), with a plain-language caption, a credit/license, and a click-to-enlarge viewer. The 27 explanation-only sections all have a specifically chosen visual rather than being left as text-only.
+- **83-visual library:** 49 original SVG diagrams created for the course, plus 34 downloaded Wikimedia Commons photographs/diagrams. 185 section placements reuse some chapter-level figures. All are stored locally under `assets/`; `ATTRIBUTIONS.md` lists authors, licenses, and source pages.
+- **Original diagrams** explain mechanisms that are hard to photograph (sampling replicas, convolution, DFT/FFT, filter responses, CT reconstruction, z-plane geometry). **Licensed images** provide real-world anchors (ear/cochlea, camera sensor, CT/MRI, radar, sonar, seismic survey, ADC die, compact disc, etc.).
 - **Quantitative labs** (most chapters): computed from the validated DSP engine with adjustable parameters and readouts.
 - **Schematic/pipeline labs** (Ch. 1): show information flow and aliasing rather than a physical 3D model.
 - **Image labs** (Ch. 23–25): synthetic test images, procedural CT phantom, 2-D FFT spectrum; models are explicitly labeled simplified.
@@ -89,7 +94,7 @@ No 3D was used. DSP is predominantly a 2D signal/geometry subject; Three.js woul
 
 - **Orientation and prerequisites:** each chapter lists objectives and prerequisite chapters; the concept map visualizes dependencies.
 - **Intuition and formal treatment:** each section has a plain-language intuition and a technical explanation; core chapters add formulas, key points, caveats, and applications.
-- **Visualization and exploration:** 33 labs with meaningful controls; no decorative controls were intentionally included (each control is wired to a computation or a display).
+- **Visualization and exploration:** 35 labs with meaningful controls; no decorative controls were intentionally included (each control is wired to a computation or a display).
 - **Worked examples:** one per chapter with stepwise reasoning and a final answer.
 - **Practice:** 100 questions with correct answers, explanations, distractor-specific hints where useful, and a suggested concept review link.
 - **Limitations:** caveats are attached to relevant sections; the source coverage page lists known ambiguities.
@@ -100,7 +105,7 @@ No 3D was used. DSP is predominantly a 2D signal/geometry subject; Three.js woul
 No source section was silently omitted. However:
 
 1. **Depth is not uniform.** Core chapters (sampling, convolution, DFT/FFT, filters, complex methods) receive more formulas, examples, and lab controls than historical/survey sections. This is a pedagogical choice, not a claim that every section has equal depth.
-2. **The source text is not reproduced.** The app summarizes and explains; it does not include the book's full prose, figures, tables, or programs. The PDF is available locally via the source links.
+2. **The source text and figures are not reproduced as app content.** The app summarizes and explains; it does not copy the book's full prose, figures, tables, or programs into its own pages. The user's local PDF is available through the embedded source reader and page links. Downloaded images and original diagrams are alternatives, not scans of the book's figures.
 3. **Some source figures/tables are represented conceptually, not reproduced.** For example, the book's filter-comparison tables and hardware timing diagrams are summarized; the labs use computed responses instead of scanned figures.
 4. **Hardware chapters are era-specific.** Chapters 28–29 describe late-1990s ADSP-2106x/SHARC hardware. The principles are covered; current devices are not.
 5. **Audio is visual, not audible.** Companding/data-rate concepts are quantitative and plotted, but the app does not play audio.
@@ -121,12 +126,12 @@ No source section was silently omitted. However:
 
 ## 8. Verification results
 
-- **Content validator:** 33 chapters, 185 sections, 0 missing, 0 too short, 0 extra; 33 labs; 100 questions.
+- **Content validator:** 33 chapters, 185 sections, 0 missing, 0 too short, 0 extra; 35 labs; 100 questions; 185/185 sections illustrated.
 - **Formula check:** all 235 formulas render in KaTeX with `throwOnError: true`; 0 errors.
 - **Unit tests:** 28/28 passing (`npm run test:unit`).
-- **Browser tests:** 72/72 checks passing (`npm run test:e2e`), including every chapter/lab, quiz persistence, search, reference pages, themes, mobile layout, reduced motion, and zero console errors.
+- **Browser tests:** 82/82 checks passing (`npm run test:e2e`), including every chapter/lab, every section figure and the image viewer, visual-library filters, the source reader, quiz persistence, search, reference pages, themes, mobile layout, reduced motion, and zero console errors.
 - **Manual review:** representative screenshots for home, labs, formulas, map, source, practice, dark theme, and mobile.
 
 ## 9. Honest conclusion
 
-This is a complete section-level companion to the supplied book: every one of the 185 extracted sections has an authored, page-referenced explanation, and every chapter has an interactive lab, worked example, and practice set. It is not a facsimile of the book, and 27 sections are intentionally explanation-only. The numerical engine is tested; the pedagogical claims are supported by the content and exercises. Remaining gaps are stated above rather than hidden.
+This is a complete section-level companion to the supplied book: every one of the 185 extracted sections has an authored, page-referenced explanation and a relevant figure, and every chapter has an interactive lab, worked example, and practice set. It is not a facsimile of the book: 27 sections are intentionally explanation-only (now illustrated), and the book's own prose/figures are not copied. The numerical engine is tested; the pedagogical claims are supported by the content, visual library, and exercises. Remaining gaps are stated above rather than hidden.

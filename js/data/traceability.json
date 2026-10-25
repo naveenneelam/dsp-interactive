@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T04:00:32.762Z",
+  "generated": "2026-10-25T05:55:36.539Z",
   "source": "Smith, The Scientist and Engineer's Guide to DSP, 2nd ed.",
   "totals": {
     "chapters": 33,
@@ -22,6 +22,8 @@
       "keyPoints": 3,
       "lab": "The signal chain, end to end",
       "labRelevant": true,
+      "figure": "The signal chain",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -39,6 +41,8 @@
       "keyPoints": 3,
       "lab": "The signal chain, end to end",
       "labRelevant": false,
+      "figure": "DSP in telecommunications",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 97
@@ -56,6 +60,8 @@
       "keyPoints": 3,
       "lab": "The signal chain, end to end",
       "labRelevant": false,
+      "figure": "A loudspeaker",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 113
@@ -73,6 +79,8 @@
       "keyPoints": 3,
       "lab": "The signal chain, end to end",
       "labRelevant": true,
+      "figure": "A radar antenna",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 113
@@ -90,6 +98,8 @@
       "keyPoints": 3,
       "lab": "The signal chain, end to end",
       "labRelevant": false,
+      "figure": "Camera sensor",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 104
@@ -107,6 +117,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "Signal versus process",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 122
@@ -124,6 +136,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "The normal distribution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -141,6 +155,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "Signal versus process",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -158,6 +174,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "A histogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 120
@@ -175,6 +193,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "The normal distribution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 91
@@ -192,6 +212,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "Signal versus process",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 107
@@ -209,6 +231,8 @@
       "keyPoints": 3,
       "lab": "Noise, histograms, and the process behind the signal",
       "labRelevant": true,
+      "figure": "Quantization staircase",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 111
@@ -226,6 +250,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "Quantization staircase",
+      "figureKind": "diagram",
       "quiz": 4,
       "status": "Full",
       "words": 136
@@ -243,6 +269,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "Sampling and aliasing",
+      "figureKind": "image",
       "quiz": 4,
       "status": "Full",
       "words": 155
@@ -260,6 +288,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "The signal chain",
+      "figureKind": "diagram",
       "quiz": 4,
       "status": "Full",
       "words": 122
@@ -277,6 +307,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 4,
       "status": "Full",
       "words": 126
@@ -294,6 +326,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "Aliasing in one picture",
+      "figureKind": "image",
       "quiz": 4,
       "status": "Full",
       "words": 141
@@ -311,6 +345,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": true,
+      "figure": "Multirate conversion",
+      "figureKind": "diagram",
       "quiz": 4,
       "status": "Full",
       "words": 126
@@ -328,6 +364,8 @@
       "keyPoints": 3,
       "lab": "Sampling, aliasing, and quantization",
       "labRelevant": false,
+      "figure": "Single-bit conversion",
+      "figureKind": "diagram",
       "quiz": 4,
       "status": "Explanation-only",
       "words": 118
@@ -345,6 +383,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 117
@@ -362,6 +402,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 125
@@ -379,6 +421,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 125
@@ -396,6 +440,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": true,
+      "figure": "Quantization error",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 136
@@ -413,6 +459,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": false,
+      "figure": "Where execution time goes",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 119
@@ -430,6 +478,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": false,
+      "figure": "Why a DSP is different",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 106
@@ -447,6 +497,8 @@
       "keyPoints": 3,
       "lab": "When arithmetic quietly drifts",
       "labRelevant": false,
+      "figure": "Where execution time goes",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 118
@@ -464,6 +516,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Superposition",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -481,6 +535,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Superposition",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 109
@@ -498,6 +554,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Superposition",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 118
@@ -515,6 +573,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 148
@@ -532,6 +592,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Superposition",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 148
@@ -549,6 +611,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Superposition",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -566,6 +630,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 127
@@ -583,6 +649,8 @@
       "keyPoints": 3,
       "lab": "Test a system for linearity",
       "labRelevant": false,
+      "figure": "Nonlinear audio processing",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 138
@@ -600,6 +668,8 @@
       "keyPoints": 3,
       "lab": "Convolution, step by step",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 113
@@ -617,6 +687,8 @@
       "keyPoints": 3,
       "lab": "Convolution, step by step",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 98
@@ -634,6 +706,8 @@
       "keyPoints": 3,
       "lab": "Convolution, step by step",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -651,6 +725,8 @@
       "keyPoints": 3,
       "lab": "Convolution, step by step",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -668,6 +744,8 @@
       "keyPoints": 3,
       "lab": "Convolution, step by step",
       "labRelevant": true,
+      "figure": "Kernels are tiny programs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 124
@@ -685,6 +763,8 @@
       "keyPoints": 3,
       "lab": "Kernels and correlation",
       "labRelevant": true,
+      "figure": "Kernels are tiny programs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -702,6 +782,8 @@
       "keyPoints": 3,
       "lab": "Kernels and correlation",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 110
@@ -719,6 +801,8 @@
       "keyPoints": 3,
       "lab": "Kernels and correlation",
       "labRelevant": true,
+      "figure": "Correlation finds a delayed copy",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -736,6 +820,8 @@
       "keyPoints": 3,
       "lab": "Kernels and correlation",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -753,6 +839,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "Time and frequency views",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 114
@@ -770,6 +858,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The DFT is a bank of correlations",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 121
@@ -787,6 +877,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The DFT is a bank of correlations",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 119
@@ -804,6 +896,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The DFT is a bank of correlations",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 128
@@ -821,6 +915,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The DFT is a bank of correlations",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 84
@@ -838,6 +934,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The DFT as a matrix",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 95
@@ -855,6 +953,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": false,
+      "figure": "Two essential Fourier pairs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 120
@@ -872,6 +972,8 @@
       "keyPoints": 3,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 76
@@ -889,6 +991,8 @@
       "keyPoints": 4,
       "lab": "Build a signal from DFT basis functions",
       "labRelevant": true,
+      "figure": "Phase and group delay",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 140
@@ -906,6 +1010,8 @@
       "keyPoints": 3,
       "lab": "Windows, leakage, and convolution",
       "labRelevant": true,
+      "figure": "Windows and leakage",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 138
@@ -923,6 +1029,8 @@
       "keyPoints": 3,
       "lab": "Windows, leakage, and convolution",
       "labRelevant": true,
+      "figure": "A spectrogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 133
@@ -940,6 +1048,8 @@
       "keyPoints": 3,
       "lab": "Windows, leakage, and convolution",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 99
@@ -957,6 +1067,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Time and frequency views",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 124
@@ -974,6 +1086,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Phase and group delay",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -991,6 +1105,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Windows and leakage",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 131
@@ -1008,6 +1124,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Sampling copies the spectrum",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 111
@@ -1025,6 +1143,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Time and frequency views",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -1042,6 +1162,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "Continuous and discrete worlds",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 97
@@ -1059,6 +1181,8 @@
       "keyPoints": 3,
       "lab": "Shift, scale, modulate, and check Parseval",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 88
@@ -1076,6 +1200,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "The sinc function",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 104
@@ -1093,6 +1219,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "The sinc function",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 110
@@ -1110,6 +1238,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "Two essential Fourier pairs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 115
@@ -1127,6 +1257,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "Window functions",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -1144,6 +1276,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "A spectrogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 114
@@ -1161,6 +1295,8 @@
       "keyPoints": 3,
       "lab": "Shapes and their spectra",
       "labRelevant": true,
+      "figure": "A chirp waveform",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -1178,6 +1314,8 @@
       "keyPoints": 3,
       "lab": "Inside the butterfly",
       "labRelevant": true,
+      "figure": "The DFT as a matrix",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -1195,6 +1333,8 @@
       "keyPoints": 3,
       "lab": "Inside the butterfly",
       "labRelevant": true,
+      "figure": "The FFT butterfly",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 121
@@ -1212,6 +1352,8 @@
       "keyPoints": 3,
       "lab": "Inside the butterfly",
       "labRelevant": false,
+      "figure": "The FFT butterfly",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 119
@@ -1229,6 +1371,8 @@
       "keyPoints": 3,
       "lab": "Inside the butterfly",
       "labRelevant": true,
+      "figure": "Where execution time goes",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -1246,6 +1390,8 @@
       "keyPoints": 3,
       "lab": "Inside the butterfly",
       "labRelevant": false,
+      "figure": "The FFT butterfly",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 108
@@ -1263,6 +1409,8 @@
       "keyPoints": 3,
       "lab": "From continuous to discrete",
       "labRelevant": true,
+      "figure": "Continuous and discrete worlds",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 121
@@ -1280,6 +1428,8 @@
       "keyPoints": 3,
       "lab": "From continuous to discrete",
       "labRelevant": true,
+      "figure": "Convolution, visually",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 110
@@ -1297,6 +1447,8 @@
       "keyPoints": 3,
       "lab": "From continuous to discrete",
       "labRelevant": true,
+      "figure": "Two essential Fourier pairs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 106
@@ -1314,6 +1466,8 @@
       "keyPoints": 3,
       "lab": "From continuous to discrete",
       "labRelevant": true,
+      "figure": "Two essential Fourier pairs",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 107
@@ -1331,6 +1485,8 @@
       "keyPoints": 3,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 142
@@ -1348,6 +1504,8 @@
       "keyPoints": 3,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "What the ear actually hears",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -1365,6 +1523,8 @@
       "keyPoints": 3,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "Phase and group delay",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 122
@@ -1382,6 +1542,8 @@
       "keyPoints": 3,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "Filter families",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 128
@@ -1399,6 +1561,8 @@
       "keyPoints": 3,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 119
@@ -1416,6 +1580,8 @@
       "keyPoints": 4,
       "lab": "The filter design trade space",
       "labRelevant": true,
+      "figure": "Four filters, one cutoff",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 144
@@ -1433,6 +1599,8 @@
       "keyPoints": 3,
       "lab": "Noise versus edge sharpness",
       "labRelevant": true,
+      "figure": "Moving average",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 119
@@ -1450,6 +1618,8 @@
       "keyPoints": 3,
       "lab": "Noise versus edge sharpness",
       "labRelevant": true,
+      "figure": "Moving-average smoothing",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 134
@@ -1467,6 +1637,8 @@
       "keyPoints": 3,
       "lab": "Noise versus edge sharpness",
       "labRelevant": true,
+      "figure": "Moving average",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 117
@@ -1484,6 +1656,8 @@
       "keyPoints": 4,
       "lab": "Noise versus edge sharpness",
       "labRelevant": false,
+      "figure": "Moving-average smoothing",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 139
@@ -1501,6 +1675,8 @@
       "keyPoints": 3,
       "lab": "Noise versus edge sharpness",
       "labRelevant": true,
+      "figure": "Moving-average smoothing",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -1518,6 +1694,8 @@
       "keyPoints": 4,
       "lab": "Design a windowed-sinc filter",
       "labRelevant": true,
+      "figure": "Windowed-sinc design",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 134
@@ -1535,6 +1713,8 @@
       "keyPoints": 4,
       "lab": "Design a windowed-sinc filter",
       "labRelevant": true,
+      "figure": "Windowed-sinc design",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -1552,6 +1732,8 @@
       "keyPoints": 3,
       "lab": "Design a windowed-sinc filter",
       "labRelevant": true,
+      "figure": "The sinc function",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 154
@@ -1569,6 +1751,8 @@
       "keyPoints": 4,
       "lab": "Design a windowed-sinc filter",
       "labRelevant": false,
+      "figure": "Window functions",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 144
@@ -1586,6 +1770,8 @@
       "keyPoints": 3,
       "lab": "Draw a response, get a filter",
       "labRelevant": true,
+      "figure": "FIR filter structure",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 140
@@ -1603,6 +1789,8 @@
       "keyPoints": 3,
       "lab": "Draw a response, get a filter",
       "labRelevant": true,
+      "figure": "Deconvolution is risky",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 128
@@ -1620,6 +1808,8 @@
       "keyPoints": 4,
       "lab": "Draw a response, get a filter",
       "labRelevant": true,
+      "figure": "Four filters, one cutoff",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -1637,6 +1827,8 @@
       "keyPoints": 3,
       "lab": "Overlap-add, block by block",
       "labRelevant": true,
+      "figure": "Overlap-add convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 130
@@ -1654,6 +1846,8 @@
       "keyPoints": 3,
       "lab": "Overlap-add, block by block",
       "labRelevant": true,
+      "figure": "The FFT butterfly",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 121
@@ -1671,6 +1865,8 @@
       "keyPoints": 4,
       "lab": "Overlap-add, block by block",
       "labRelevant": false,
+      "figure": "Overlap-add convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 134
@@ -1688,6 +1884,8 @@
       "keyPoints": 3,
       "lab": "Single-pole filters and stability",
       "labRelevant": true,
+      "figure": "Recursive filtering",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -1705,6 +1903,8 @@
       "keyPoints": 4,
       "lab": "Single-pole filters and stability",
       "labRelevant": true,
+      "figure": "Recursive filtering",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 125
@@ -1722,6 +1922,8 @@
       "keyPoints": 3,
       "lab": "Single-pole filters and stability",
       "labRelevant": false,
+      "figure": "The z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 151
@@ -1739,6 +1941,8 @@
       "keyPoints": 4,
       "lab": "Single-pole filters and stability",
       "labRelevant": true,
+      "figure": "Phase and group delay",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 145
@@ -1756,6 +1960,8 @@
       "keyPoints": 4,
       "lab": "Single-pole filters and stability",
       "labRelevant": false,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 125
@@ -1773,6 +1979,8 @@
       "keyPoints": 3,
       "lab": "Ripple, order, and overshoot",
       "labRelevant": true,
+      "figure": "Chebyshev versus Butterworth",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 139
@@ -1790,6 +1998,8 @@
       "keyPoints": 3,
       "lab": "Ripple, order, and overshoot",
       "labRelevant": true,
+      "figure": "Chebyshev response",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 140
@@ -1807,6 +2017,8 @@
       "keyPoints": 3,
       "lab": "Ripple, order, and overshoot",
       "labRelevant": true,
+      "figure": "Phase and group delay",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -1824,6 +2036,8 @@
       "keyPoints": 3,
       "lab": "Ripple, order, and overshoot",
       "labRelevant": true,
+      "figure": "The z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 156
@@ -1841,6 +2055,8 @@
       "keyPoints": 3,
       "lab": "Four filters, one specification",
       "labRelevant": true,
+      "figure": "Filter families",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 136
@@ -1858,6 +2074,8 @@
       "keyPoints": 3,
       "lab": "Four filters, one specification",
       "labRelevant": true,
+      "figure": "Four filters, one cutoff",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 138
@@ -1875,6 +2093,8 @@
       "keyPoints": 3,
       "lab": "Four filters, one specification",
       "labRelevant": true,
+      "figure": "Moving average",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 149
@@ -1892,6 +2112,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "Anatomy of the ear",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 146
@@ -1909,6 +2131,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "The cochlea",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 114
@@ -1926,6 +2150,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "PCM and DSD",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 118
@@ -1943,6 +2169,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "Compact disc",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 118
@@ -1960,6 +2188,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "PCM and DSD",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -1977,6 +2207,8 @@
       "keyPoints": 3,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": true,
+      "figure": "What the ear actually hears",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -1994,6 +2226,8 @@
       "keyPoints": 4,
       "lab": "Hearing, companding, and data rate",
       "labRelevant": false,
+      "figure": "Nonlinear audio processing",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 132
@@ -2011,6 +2245,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": true,
+      "figure": "An image is a sampled 2-D signal",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 144
@@ -2028,6 +2264,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": true,
+      "figure": "Camera sensor",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -2045,6 +2283,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": false,
+      "figure": "Video is a scanned signal",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 127
@@ -2062,6 +2302,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": false,
+      "figure": "An MRI scanner",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 115
@@ -2079,6 +2321,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": true,
+      "figure": "A histogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 111
@@ -2096,6 +2340,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": true,
+      "figure": "A histogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 120
@@ -2113,6 +2359,8 @@
       "keyPoints": 3,
       "lab": "Pixels, brightness, and warping",
       "labRelevant": true,
+      "figure": "An image is a sampled 2-D signal",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 125
@@ -2130,6 +2378,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "2-D convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -2147,6 +2397,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "2-D convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 110
@@ -2164,6 +2416,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "2-D convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 118
@@ -2181,6 +2435,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "2-D convolution",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 125
@@ -2198,6 +2454,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "Images have spatial spectra",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 128
@@ -2215,6 +2473,8 @@
       "keyPoints": 3,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": true,
+      "figure": "The FFT butterfly",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 105
@@ -2232,6 +2492,8 @@
       "keyPoints": 4,
       "lab": "Kernels, separability, and spectra",
       "labRelevant": false,
+      "figure": "A kernel sliding over a grid",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 127
@@ -2249,6 +2511,8 @@
       "keyPoints": 3,
       "lab": "Resolution, morphology, and CT",
       "labRelevant": true,
+      "figure": "An image is a sampled 2-D signal",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 133
@@ -2266,6 +2530,8 @@
       "keyPoints": 3,
       "lab": "Resolution, morphology, and CT",
       "labRelevant": true,
+      "figure": "Bayer color mosaic",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 134
@@ -2283,6 +2549,8 @@
       "keyPoints": 3,
       "lab": "Resolution, morphology, and CT",
       "labRelevant": true,
+      "figure": "A histogram",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -2300,6 +2568,8 @@
       "keyPoints": 3,
       "lab": "Resolution, morphology, and CT",
       "labRelevant": true,
+      "figure": "Morphological processing",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 124
@@ -2317,6 +2587,8 @@
       "keyPoints": 3,
       "lab": "Resolution, morphology, and CT",
       "labRelevant": true,
+      "figure": "Computed tomography",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 139
@@ -2334,6 +2606,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": true,
+      "figure": "A feedforward network",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 134
@@ -2351,6 +2625,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": true,
+      "figure": "A feedforward network",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 135
@@ -2368,6 +2644,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": true,
+      "figure": "A feedforward network",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 123
@@ -2385,6 +2663,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": true,
+      "figure": "A perceptron",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -2402,6 +2682,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": true,
+      "figure": "A perceptron",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 122
@@ -2419,6 +2701,8 @@
       "keyPoints": 3,
       "lab": "Train a perceptron",
       "labRelevant": false,
+      "figure": "A feedforward network",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 144
@@ -2436,6 +2720,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "The compression pipeline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -2453,6 +2739,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "The compression pipeline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -2470,6 +2758,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "A Huffman tree",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -2487,6 +2777,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "The compression pipeline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 111
@@ -2504,6 +2796,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "The compression pipeline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -2521,6 +2815,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "JPEG transform compression",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 120
@@ -2538,6 +2834,8 @@
       "keyPoints": 3,
       "lab": "Compress text and images",
       "labRelevant": true,
+      "figure": "MPEG video compression",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 122
@@ -2555,6 +2853,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": true,
+      "figure": "Why a DSP is different",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 126
@@ -2572,6 +2872,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": true,
+      "figure": "Circular buffering",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 140
@@ -2589,6 +2891,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": false,
+      "figure": "Why a DSP is different",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 126
@@ -2606,6 +2910,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 132
@@ -2623,6 +2929,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": false,
+      "figure": "Where execution time goes",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 120
@@ -2640,6 +2948,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": true,
+      "figure": "Real time is a deadline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 129
@@ -2657,6 +2967,8 @@
       "keyPoints": 3,
       "lab": "Circular buffers and the MAC loop",
       "labRelevant": false,
+      "figure": "The implementation landscape",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 116
@@ -2674,6 +2986,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": false,
+      "figure": "Why a DSP is different",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 129
@@ -2691,6 +3005,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": false,
+      "figure": "An ADC die",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 120
@@ -2708,6 +3024,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": true,
+      "figure": "FIR filter structure",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 143
@@ -2725,6 +3043,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": true,
+      "figure": "Real time is a deadline",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -2742,6 +3062,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 128
@@ -2759,6 +3081,8 @@
       "keyPoints": 3,
       "lab": "Size a real-time FIR audio filter",
       "labRelevant": false,
+      "figure": "Where execution time goes",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Explanation-only",
       "words": 108
@@ -2776,6 +3100,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 99
@@ -2793,6 +3119,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 94
@@ -2810,6 +3138,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 107
@@ -2827,6 +3157,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "Time and frequency views",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 112
@@ -2844,6 +3176,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 112
@@ -2861,6 +3195,8 @@
       "keyPoints": 3,
       "lab": "Rotate, multiply, and filter",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 114
@@ -2878,6 +3214,8 @@
       "keyPoints": 3,
       "lab": "The complex spectrum, including negative frequencies",
       "labRelevant": true,
+      "figure": "The DFT is a bank of correlations",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 113
@@ -2895,6 +3233,8 @@
       "keyPoints": 3,
       "lab": "The complex spectrum, including negative frequencies",
       "labRelevant": true,
+      "figure": "The DFT as a matrix",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 114
@@ -2912,6 +3252,8 @@
       "keyPoints": 3,
       "lab": "The complex spectrum, including negative frequencies",
       "labRelevant": true,
+      "figure": "The DFT as a matrix",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 100
@@ -2929,6 +3271,8 @@
       "keyPoints": 3,
       "lab": "The complex spectrum, including negative frequencies",
       "labRelevant": true,
+      "figure": "Time and frequency views",
+      "figureKind": "image",
       "quiz": 3,
       "status": "Full",
       "words": 112
@@ -2946,6 +3290,8 @@
       "keyPoints": 4,
       "lab": "The complex spectrum, including negative frequencies",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 115
@@ -2963,6 +3309,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and the s-plane",
       "labRelevant": true,
+      "figure": "From s-plane to z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 103
@@ -2980,6 +3328,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and the s-plane",
       "labRelevant": true,
+      "figure": "From s-plane to z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 102
@@ -2997,6 +3347,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and the s-plane",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 99
@@ -3014,6 +3366,8 @@
       "keyPoints": 4,
       "lab": "Poles, zeros, and the s-plane",
       "labRelevant": true,
+      "figure": "The z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 124
@@ -3031,6 +3385,8 @@
       "keyPoints": 4,
       "lab": "Poles, zeros, and the s-plane",
       "labRelevant": true,
+      "figure": "Chebyshev versus Butterworth",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 134
@@ -3048,6 +3404,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "The z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 130
@@ -3065,6 +3423,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "Recursive filtering",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 111
@@ -3082,6 +3442,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "Four filters, one cutoff",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 112
@@ -3099,6 +3461,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "The four filter responses",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 116
@@ -3116,6 +3480,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "Fixed and floating point",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 122
@@ -3133,6 +3499,8 @@
       "keyPoints": 3,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "From s-plane to z-plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 130
@@ -3150,6 +3518,8 @@
       "keyPoints": 4,
       "lab": "Poles, zeros, and digital stability",
       "labRelevant": true,
+      "figure": "The complex plane",
+      "figureKind": "diagram",
       "quiz": 3,
       "status": "Full",
       "words": 135

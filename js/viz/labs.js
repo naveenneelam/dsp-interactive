@@ -11,6 +11,7 @@ import './labs-filters.js';
 import './labs-apps.js';
 import './labs-apps2.js';
 import './labs-complex.js';
+import './labs-advanced.js';
 
 export function mountLab(id, el, ctx) {
   const fn = getLab(id);

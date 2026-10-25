@@ -7,7 +7,8 @@ Source: Steven W. Smith, *The Scientist and Engineer's Guide to Digital Signal P
 - **Authored explanations:** 185/185
 - **Formulas:** 235
 - **Practice questions:** 100
-- **Interactive labs:** 33
+- **Interactive labs:** 35
+- **Sections with a figure:** 185/185
 
 ## Chapter inventory
 
@@ -51,193 +52,193 @@ Source: Steven W. Smith, *The Scientist and Engineer's Guide to Digital Signal P
 
 Each section id is stable and used by the app, the traceability matrix, quizzes, and the progress store.
 
-| ID | Concept | Book p. | PDF p. | Level | Words | Formulas | Key points | Lab route | Status |
-|---|---|---|---:|---:|---|---:|---:|---:|---|---|
-| 1.1 | The Roots of DSP | 1 | 15 | core | 129 | 0 | 3 | The signal chain, end to end | Full |
-| 1.2 | Telecommunications | 4 | 18 | support | 97 | 0 | 3 | Explanation-only | Explanation-only |
-| 1.3 | Audio Processing | 5 | 19 | support | 113 | 0 | 3 | Explanation-only | Explanation-only |
-| 1.4 | Echo Location | 7 | 21 | support | 113 | 1 | 3 | The signal chain, end to end | Full |
-| 1.5 | Image Processing | 9 | 23 | support | 104 | 0 | 3 | Explanation-only | Explanation-only |
-| 2.1 | Signal and Graph Terminology | 11 | 25 | core | 122 | 1 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.2 | Mean and Standard Deviation | 13 | 27 | core | 123 | 3 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.3 | Signal vs. Underlying Process | 17 | 31 | core | 126 | 0 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.4 | The Histogram, Pmf and Pdf | 19 | 33 | core | 120 | 2 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.5 | The Normal Distribution | 26 | 40 | core | 91 | 2 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.6 | Digital Noise Generation | 29 | 43 | core | 107 | 2 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 2.7 | Precision and Accuracy | 32 | 46 | core | 111 | 0 | 3 | Noise, histograms, and the process behind the signal | Full |
-| 3.1 | Quantization | 35 | 73 | core | 136 | 3 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.2 | The Sampling Theorem | 39 | 77 | core | 155 | 3 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.3 | Digital-to-Analog Conversion | 44 | 82 | core | 122 | 1 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.4 | Analog Filters for Data Conversion | 48 | 86 | core | 126 | 0 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.5 | Selecting The Antialias Filter | 55 | 93 | core | 141 | 0 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.6 | Multirate Data Conversion | 58 | 96 | core | 126 | 1 | 3 | Sampling, aliasing, and quantization | Full |
-| 3.7 | Single Bit Data Conversion | 60 | 98 | advanced | 118 | 0 | 3 | Explanation-only | Explanation-only |
-| 4.1 | Computer Numbers | 67 | 105 | core | 117 | 0 | 3 | When arithmetic quietly drifts | Full |
-| 4.2 | Fixed Point (Integers) | 68 | 106 | core | 125 | 2 | 3 | When arithmetic quietly drifts | Full |
-| 4.3 | Floating Point (Real Numbers) | 70 | 108 | core | 125 | 2 | 3 | When arithmetic quietly drifts | Full |
-| 4.4 | Number Precision | 72 | 110 | core | 136 | 2 | 3 | When arithmetic quietly drifts | Full |
-| 4.5 | Execution Speed: Program Language | 76 | 114 | support | 119 | 0 | 3 | Explanation-only | Explanation-only |
-| 4.6 | Execution Speed: Hardware | 80 | 118 | support | 106 | 0 | 3 | Explanation-only | Explanation-only |
-| 4.7 | Execution Speed: Programming Tips | 85 | 123 | support | 118 | 0 | 3 | Explanation-only | Explanation-only |
-| 5.1 | Signals and Systems | 87 | 125 | core | 129 | 1 | 3 | Test a system for linearity | Full |
-| 5.2 | Requirements for Linearity | 89 | 127 | core | 109 | 3 | 3 | Test a system for linearity | Full |
-| 5.3 | Static Linearity and Sinusoidal Fidelity | 92 | 130 | core | 118 | 2 | 3 | Test a system for linearity | Full |
-| 5.4 | Examples of Linear and Nonlinear Systems | 94 | 132 | core | 148 | 0 | 3 | Test a system for linearity | Full |
-| 5.5 | Special Properties of Linearity | 96 | 134 | core | 148 | 0 | 3 | Test a system for linearity | Full |
-| 5.6 | Superposition: the Foundation of DSP | 98 | 136 | core | 129 | 0 | 3 | Test a system for linearity | Full |
-| 5.7 | Common Decompositions | 100 | 138 | core | 127 | 2 | 3 | Test a system for linearity | Full |
-| 5.8 | Alternatives to Linearity | 104 | 142 | advanced | 138 | 0 | 3 | Explanation-only | Explanation-only |
-| 6.1 | The Delta Function and Impulse Response | 107 | 145 | core | 113 | 2 | 3 | Convolution, step by step | Full |
-| 6.2 | Convolution | 108 | 146 | core | 98 | 3 | 3 | Convolution, step by step | Full |
-| 6.3 | The Input Side Algorithm | 112 | 150 | core | 123 | 1 | 3 | Convolution, step by step | Full |
-| 6.4 | The Output Side Algorithm | 116 | 154 | core | 123 | 1 | 3 | Convolution, step by step | Full |
-| 6.5 | The Sum of Weighted Inputs | 122 | 160 | core | 124 | 0 | 3 | Convolution, step by step | Full |
-| 7.1 | Common Impulse Responses | 123 | 161 | core | 132 | 3 | 3 | Kernels and correlation | Full |
-| 7.2 | Mathematical Properties | 132 | 170 | core | 110 | 3 | 3 | Kernels and correlation | Full |
-| 7.3 | Correlation | 136 | 174 | core | 116 | 2 | 3 | Kernels and correlation | Full |
-| 7.4 | Speed | 140 | 178 | core | 126 | 2 | 3 | Kernels and correlation | Full |
-| 8.1 | The Family of Fourier Transform | 141 | 179 | core | 114 | 1 | 3 | Build a signal from DFT basis functions | Full |
-| 8.2 | Notation and Format of the Real DFT | 146 | 184 | core | 121 | 2 | 3 | Build a signal from DFT basis functions | Full |
-| 8.3 | The Frequency Domain's Independent Variable | 148 | 186 | core | 119 | 2 | 3 | Build a signal from DFT basis functions | Full |
-| 8.4 | DFT Basis Functions | 150 | 188 | core | 128 | 2 | 3 | Build a signal from DFT basis functions | Full |
-| 8.5 | Synthesis, Calculating the Inverse DFT | 152 | 190 | core | 84 | 1 | 3 | Build a signal from DFT basis functions | Full |
-| 8.6 | Analysis, Calculating the DFT | 157 | 195 | core | 95 | 2 | 3 | Build a signal from DFT basis functions | Full |
-| 8.7 | Duality | 161 | 199 | advanced | 120 | 0 | 3 | Explanation-only | Explanation-only |
-| 8.8 | Polar Notation | 161 | 199 | core | 76 | 2 | 3 | Build a signal from DFT basis functions | Full |
-| 8.9 | Polar Nuisances | 164 | 202 | core | 140 | 0 | 4 | Build a signal from DFT basis functions | Full |
-| 9.1 | Spectral Analysis of Signals | 169 | 207 | core | 138 | 2 | 3 | Windows, leakage, and convolution | Full |
-| 9.2 | Frequency Response of Systems | 177 | 215 | core | 133 | 2 | 3 | Windows, leakage, and convolution | Full |
-| 9.3 | Convolution via the Frequency Domain | 180 | 218 | core | 99 | 2 | 3 | Windows, leakage, and convolution | Full |
-| 10.1 | Linearity of the Fourier Transform | 185 | 223 | core | 124 | 1 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.2 | Characteristics of the Phase | 188 | 226 | core | 123 | 2 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.3 | Periodic Nature of the DFT | 194 | 232 | core | 131 | 0 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.4 | Compression and Expansion, Multirate methods | 200 | 238 | core | 111 | 2 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.5 | Multiplying Signals (Amplitude Modulation) | 204 | 242 | core | 116 | 2 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.6 | The Discrete Time Fourier Transform | 206 | 244 | advanced | 97 | 2 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 10.7 | Parseval's Relation | 208 | 246 | core | 88 | 1 | 3 | Shift, scale, modulate, and check Parseval | Full |
-| 11.1 | Delta Function Pairs | 209 | 247 | core | 104 | 2 | 3 | Shapes and their spectra | Full |
-| 11.2 | The Sinc Function | 212 | 250 | core | 110 | 2 | 3 | Shapes and their spectra | Full |
-| 11.3 | Other Transform Pairs | 215 | 253 | core | 115 | 2 | 3 | Shapes and their spectra | Full |
-| 11.4 | Gibbs Effect | 218 | 256 | core | 132 | 0 | 3 | Shapes and their spectra | Full |
-| 11.5 | Harmonics | 220 | 258 | core | 114 | 2 | 3 | Shapes and their spectra | Full |
-| 11.6 | Chirp Signals | 222 | 260 | advanced | 126 | 2 | 3 | Shapes and their spectra | Full |
-| 12.1 | Real DFT Using the Complex DFT | 225 | 263 | core | 123 | 2 | 3 | Inside the butterfly | Full |
-| 12.2 | How the FFT works | 228 | 266 | core | 121 | 3 | 3 | Inside the butterfly | Full |
-| 12.3 | FFT Programs | 233 | 271 | support | 119 | 0 | 3 | Explanation-only | Explanation-only |
-| 12.4 | Speed and Precision Comparisons | 237 | 275 | core | 126 | 2 | 3 | Inside the butterfly | Full |
-| 12.5 | Further Speed Increases | 238 | 276 | advanced | 108 | 0 | 3 | Explanation-only | Explanation-only |
-| 13.1 | The Delta Function | 243 | 281 | core | 121 | 2 | 3 | From continuous to discrete | Full |
-| 13.2 | Convolution | 246 | 284 | core | 110 | 2 | 3 | From continuous to discrete | Full |
-| 13.3 | The Fourier Transform | 252 | 290 | core | 106 | 2 | 3 | From continuous to discrete | Full |
-| 13.4 | The Fourier Series | 255 | 293 | core | 107 | 2 | 3 | From continuous to discrete | Full |
-| 14.1 | Filter Basics | 261 | 299 | core | 142 | 0 | 3 | The filter design trade space | Full |
-| 14.2 | How Information is Represented in Signals | 265 | 303 | core | 132 | 0 | 3 | The filter design trade space | Full |
-| 14.3 | Time Domain Parameters | 266 | 304 | core | 122 | 2 | 3 | The filter design trade space | Full |
-| 14.4 | Frequency Domain Parameters | 268 | 306 | core | 128 | 2 | 3 | The filter design trade space | Full |
-| 14.5 | High-Pass, Band-Pass and Band-Reject Filters | 271 | 309 | core | 119 | 2 | 3 | The filter design trade space | Full |
-| 14.6 | Filter Classification | 274 | 312 | core | 144 | 0 | 4 | The filter design trade space | Full |
-| 15.1 | Implementation by Convolution | 277 | 315 | core | 119 | 3 | 3 | Noise versus edge sharpness | Full |
-| 15.2 | Noise Reduction vs. Step Response | 278 | 316 | core | 134 | 2 | 3 | Noise versus edge sharpness | Full |
-| 15.3 | Frequency Response | 280 | 318 | core | 117 | 3 | 3 | Noise versus edge sharpness | Full |
-| 15.4 | Relatives of the Moving Average Filter | 280 | 318 | support | 139 | 0 | 4 | Explanation-only | Explanation-only |
-| 15.5 | Recursive Implementation | 282 | 320 | core | 123 | 2 | 3 | Noise versus edge sharpness | Full |
-| 16.1 | Strategy of the Windowed-Sinc | 285 | 323 | core | 134 | 2 | 4 | Design a windowed-sinc filter | Full |
-| 16.2 | Designing the Filter | 288 | 326 | core | 129 | 3 | 4 | Design a windowed-sinc filter | Full |
-| 16.3 | Examples of Windowed-Sinc Filters | 292 | 330 | core | 154 | 0 | 3 | Design a windowed-sinc filter | Full |
-| 16.4 | Pushing it to the Limit | 293 | 331 | advanced | 144 | 0 | 4 | Explanation-only | Explanation-only |
-| 17.1 | Arbitrary Frequency Response | 297 | 335 | core | 140 | 2 | 3 | Draw a response, get a filter | Full |
-| 17.2 | Deconvolution | 300 | 338 | advanced | 128 | 2 | 3 | Draw a response, get a filter | Full |
-| 17.3 | Optimal Filters | 307 | 345 | advanced | 126 | 2 | 4 | Draw a response, get a filter | Full |
-| 18.1 | The Overlap-Add Method | 311 | 349 | core | 130 | 2 | 3 | Overlap-add, block by block | Full |
-| 18.2 | FFT Convolution | 312 | 350 | core | 121 | 2 | 3 | Overlap-add, block by block | Full |
-| 18.3 | Speed Improvements | 316 | 354 | advanced | 134 | 0 | 4 | Explanation-only | Explanation-only |
-| 19.1 | The Recursive Method | 319 | 357 | core | 123 | 2 | 3 | Single-pole filters and stability | Full |
-| 19.2 | Single Pole Recursive Filters | 322 | 360 | core | 125 | 3 | 4 | Single-pole filters and stability | Full |
-| 19.3 | Narrow-band Filters | 326 | 364 | advanced | 151 | 0 | 3 | Explanation-only | Explanation-only |
-| 19.4 | Phase Response | 328 | 366 | core | 145 | 0 | 4 | Single-pole filters and stability | Full |
-| 19.5 | Using Integers | 332 | 370 | advanced | 125 | 0 | 4 | Explanation-only | Explanation-only |
-| 20.1 | The Chebyshev and Butterworth Responses | 333 | 371 | core | 139 | 2 | 3 | Ripple, order, and overshoot | Full |
-| 20.2 | Designing the Filter | 334 | 372 | core | 140 | 2 | 3 | Ripple, order, and overshoot | Full |
-| 20.3 | Step Response Overshoot | 338 | 376 | core | 129 | 0 | 3 | Ripple, order, and overshoot | Full |
-| 20.4 | Stability | 339 | 377 | advanced | 156 | 1 | 3 | Ripple, order, and overshoot | Full |
-| 21.1 | Match #1:  Analog vs. Digital Filters | 343 | 381 | core | 136 | 0 | 3 | Four filters, one specification | Full |
-| 21.2 | Match #2:  Windowed-Sinc vs. Chebyshev | 346 | 384 | core | 138 | 0 | 3 | Four filters, one specification | Full |
-| 21.3 | Match #3:  Moving Average vs. Single Pole | 348 | 386 | core | 149 | 0 | 3 | Four filters, one specification | Full |
-| 22.1 | Human Hearing | 351 | 389 | core | 146 | 0 | 3 | Hearing, companding, and data rate | Full |
-| 22.2 | Timbre | 355 | 393 | core | 114 | 0 | 3 | Hearing, companding, and data rate | Full |
-| 22.3 | Sound Quality vs. Data Rate | 358 | 396 | core | 118 | 1 | 3 | Hearing, companding, and data rate | Full |
-| 22.4 | High Fidelity Audio | 359 | 397 | core | 118 | 0 | 3 | Hearing, companding, and data rate | Full |
-| 22.5 | Companding | 362 | 400 | core | 129 | 2 | 3 | Hearing, companding, and data rate | Full |
-| 22.6 | Speech Synthesis and Recognition | 364 | 402 | core | 132 | 0 | 3 | Hearing, companding, and data rate | Full |
-| 22.7 | Nonlinear Audio Processing | 368 | 406 | advanced | 132 | 0 | 4 | Explanation-only | Explanation-only |
-| 23.1 | Digital Image Structure | 373 | 411 | core | 144 | 2 | 3 | Pixels, brightness, and warping | Full |
-| 23.2 | Cameras and Eyes | 376 | 414 | core | 132 | 0 | 3 | Pixels, brightness, and warping | Full |
-| 23.3 | Television Video Signals | 384 | 422 | support | 127 | 0 | 3 | Explanation-only | Explanation-only |
-| 23.4 | Other Image Acquisition and Display | 386 | 424 | support | 115 | 0 | 3 | Explanation-only | Explanation-only |
-| 23.5 | Brightness and Contrast Adjustments | 387 | 425 | core | 111 | 2 | 3 | Pixels, brightness, and warping | Full |
-| 23.6 | Grayscale Transforms | 390 | 428 | core | 120 | 0 | 3 | Pixels, brightness, and warping | Full |
-| 23.7 | Warping | 394 | 432 | core | 125 | 1 | 3 | Pixels, brightness, and warping | Full |
-| 24.1 | Convolution | 397 | 435 | core | 116 | 2 | 3 | Kernels, separability, and spectra | Full |
-| 24.2 | 3×3 Edge Modification | 402 | 440 | core | 110 | 3 | 3 | Kernels, separability, and spectra | Full |
-| 24.3 | Convolution by Separability | 404 | 442 | core | 118 | 2 | 3 | Kernels, separability, and spectra | Full |
-| 24.4 | Example of a Large PSF: Illumination Flattening | 407 | 445 | core | 125 | 2 | 3 | Kernels, separability, and spectra | Full |
-| 24.5 | Fourier Image Analysis | 410 | 448 | core | 128 | 0 | 3 | Kernels, separability, and spectra | Full |
-| 24.6 | FFT Convolution | 416 | 454 | core | 105 | 1 | 3 | Kernels, separability, and spectra | Full |
-| 24.7 | A Closer Look at Image Convolution | 418 | 456 | advanced | 127 | 0 | 4 | Explanation-only | Explanation-only |
-| 25.1 | Spatial Resolution | 423 | 461 | core | 133 | 2 | 3 | Resolution, morphology, and CT | Full |
-| 25.2 | Sample Spacing and Sampling Aperture | 430 | 468 | core | 134 | 0 | 3 | Resolution, morphology, and CT | Full |
-| 25.3 | Signal-to-Noise Ratio | 432 | 470 | core | 126 | 2 | 3 | Resolution, morphology, and CT | Full |
-| 25.4 | Morphological Image Processing | 436 | 474 | core | 124 | 2 | 3 | Resolution, morphology, and CT | Full |
-| 25.5 | Computed Tomography | 442 | 480 | advanced | 139 | 2 | 3 | Resolution, morphology, and CT | Full |
-| 26.1 | Target Detection | 451 | 489 | core | 134 | 2 | 3 | Train a perceptron | Full |
-| 26.2 | Neural Network Architecture | 458 | 496 | core | 135 | 2 | 3 | Train a perceptron | Full |
-| 26.3 | Why Does It Work? | 463 | 501 | core | 123 | 0 | 3 | Train a perceptron | Full |
-| 26.4 | Training the Neural Network | 465 | 503 | core | 132 | 2 | 3 | Train a perceptron | Full |
-| 26.5 | Evaluating the Results | 473 | 511 | core | 122 | 2 | 3 | Train a perceptron | Full |
-| 26.6 | Recursive Filter Design | 476 | 514 | advanced | 144 | 0 | 3 | Explanation-only | Explanation-only |
-| 27.1 | Data Compression Strategies | 481 | 519 | core | 116 | 2 | 3 | Compress text and images | Full |
-| 27.2 | Run-Length Encoding | 483 | 521 | core | 116 | 0 | 3 | Compress text and images | Full |
-| 27.3 | Huffman Encoding | 484 | 522 | core | 126 | 2 | 3 | Compress text and images | Full |
-| 27.4 | Delta Encoding | 486 | 524 | core | 111 | 2 | 3 | Compress text and images | Full |
-| 27.5 | LZW Compression | 488 | 526 | core | 126 | 0 | 3 | Compress text and images | Full |
-| 27.6 | JPEG (Transform Compression) | 494 | 532 | core | 120 | 2 | 3 | Compress text and images | Full |
-| 27.7 | MPEG | 501 | 539 | core | 122 | 0 | 3 | Compress text and images | Full |
-| 28.1 | How DSPs are Different from Other Microprocessors | 503 | 541 | core | 126 | 0 | 3 | Circular buffers and the MAC loop | Full |
-| 28.2 | Circular Buffering | 506 | 544 | core | 140 | 2 | 3 | Circular buffers and the MAC loop | Full |
-| 28.3 | Architecture of the Digital Signal Processor | 509 | 547 | support | 126 | 0 | 3 | Explanation-only | Explanation-only |
-| 28.4 | Fixed versus Floating Point | 514 | 552 | core | 132 | 0 | 3 | Circular buffers and the MAC loop | Full |
-| 28.5 | C versus Assembly | 520 | 558 | support | 120 | 0 | 3 | Explanation-only | Explanation-only |
-| 28.6 | How Fast are DSPs? | 526 | 564 | support | 129 | 2 | 3 | Circular buffers and the MAC loop | Full |
-| 28.7 | The Digital Signal Processor Market | 531 | 569 | support | 116 | 0 | 3 | Explanation-only | Explanation-only |
-| 29.1 | The ADSP-2106x family | 535 | 573 | support | 129 | 0 | 3 | Explanation-only | Explanation-only |
-| 29.2 | The SHARC EZ-KIT Lite | 537 | 575 | support | 120 | 0 | 3 | Explanation-only | Explanation-only |
-| 29.3 | Design Example: An FIR Audio Filter | 538 | 576 | core | 143 | 1 | 3 | Size a real-time FIR audio filter | Full |
-| 29.4 | Analog measurements on a DSP system | 542 | 580 | core | 116 | 0 | 3 | Size a real-time FIR audio filter | Full |
-| 29.5 | Another Look at Fixed versus Floating Point | 544 | 582 | core | 128 | 0 | 3 | Size a real-time FIR audio filter | Full |
-| 29.6 | Advanced Software Tools | 546 | 584 | support | 108 | 0 | 3 | Explanation-only | Explanation-only |
-| 30.1 | The Complex Number System | 551 | 589 | core | 99 | 3 | 3 | Rotate, multiply, and filter | Full |
-| 30.2 | Polar Notation | 555 | 593 | core | 94 | 3 | 3 | Rotate, multiply, and filter | Full |
-| 30.3 | Using Complex Numbers by Substitution | 557 | 595 | core | 107 | 2 | 3 | Rotate, multiply, and filter | Full |
-| 30.4 | Complex Representation of Sinusoids | 559 | 597 | core | 112 | 2 | 3 | Rotate, multiply, and filter | Full |
-| 30.5 | Complex Representation of Systems | 561 | 599 | core | 112 | 2 | 3 | Rotate, multiply, and filter | Full |
-| 30.6 | Electrical Circuit Analysis | 563 | 601 | support | 114 | 2 | 3 | Rotate, multiply, and filter | Full |
-| 31.1 | The Real DFT | 567 | 605 | core | 113 | 1 | 3 | The complex spectrum, including negative frequencies | Full |
-| 31.2 | Mathematical Equivalence | 569 | 607 | core | 114 | 2 | 3 | The complex spectrum, including negative frequencies | Full |
-| 31.3 | The Complex DFT | 570 | 608 | core | 100 | 2 | 3 | The complex spectrum, including negative frequencies | Full |
-| 31.4 | The Family of Fourier Transforms | 575 | 613 | core | 112 | 0 | 3 | The complex spectrum, including negative frequencies | Full |
-| 31.5 | Why the Complex Fourier Transform is Used | 577 | 615 | core | 115 | 0 | 4 | The complex spectrum, including negative frequencies | Full |
-| 32.1 | The Nature of the s-Domain | 581 | 619 | core | 103 | 2 | 3 | Poles, zeros, and the s-plane | Full |
-| 32.2 | Strategy of the Laplace Transform | 588 | 626 | core | 102 | 2 | 3 | Poles, zeros, and the s-plane | Full |
-| 32.3 | Analysis of Electric Circuits | 592 | 630 | core | 99 | 2 | 3 | Poles, zeros, and the s-plane | Full |
-| 32.4 | The Importance of Poles and Zeros | 597 | 635 | core | 124 | 2 | 4 | Poles, zeros, and the s-plane | Full |
-| 32.5 | Filter Design in the s-Domain | 600 | 638 | advanced | 134 | 3 | 4 | Poles, zeros, and the s-plane | Full |
-| 33.1 | The Nature of the z-Domain | 605 | 643 | core | 130 | 3 | 3 | Poles, zeros, and digital stability | Full |
-| 33.2 | Analysis of Recursive Systems | 610 | 648 | core | 111 | 3 | 3 | Poles, zeros, and digital stability | Full |
-| 33.3 | Cascade and Parallel Stages | 616 | 654 | core | 112 | 2 | 3 | Poles, zeros, and digital stability | Full |
-| 33.4 | Spectral Inversion | 619 | 657 | core | 116 | 2 | 3 | Poles, zeros, and digital stability | Full |
-| 33.5 | Gain Changes | 621 | 659 | core | 122 | 2 | 3 | Poles, zeros, and digital stability | Full |
-| 33.6 | Chebyshev-Butterworth Filter Design | 623 | 661 | advanced | 130 | 2 | 3 | Poles, zeros, and digital stability | Full |
-| 33.7 | The Best and Worst of DSP | 630 | 668 | core | 135 | 0 | 4 | Poles, zeros, and digital stability | Full |
+| ID | Concept | Book p. | PDF p. | Level | Words | Formulas | Key points | Figure | Lab route | Status |
+|---|---|---|---:|---:|---|---:|---:|---:|---|---|---|
+| 1.1 | The Roots of DSP | 1 | 15 | core | 129 | 0 | 3 | The signal chain | The signal chain, end to end | Full |
+| 1.2 | Telecommunications | 4 | 18 | support | 97 | 0 | 3 | DSP in telecommunications | Explanation-only | Explanation-only |
+| 1.3 | Audio Processing | 5 | 19 | support | 113 | 0 | 3 | A loudspeaker | Explanation-only | Explanation-only |
+| 1.4 | Echo Location | 7 | 21 | support | 113 | 1 | 3 | A radar antenna | The signal chain, end to end | Full |
+| 1.5 | Image Processing | 9 | 23 | support | 104 | 0 | 3 | Camera sensor | Explanation-only | Explanation-only |
+| 2.1 | Signal and Graph Terminology | 11 | 25 | core | 122 | 1 | 3 | Signal versus process | Noise, histograms, and the process behind the signal | Full |
+| 2.2 | Mean and Standard Deviation | 13 | 27 | core | 123 | 3 | 3 | The normal distribution | Noise, histograms, and the process behind the signal | Full |
+| 2.3 | Signal vs. Underlying Process | 17 | 31 | core | 126 | 0 | 3 | Signal versus process | Noise, histograms, and the process behind the signal | Full |
+| 2.4 | The Histogram, Pmf and Pdf | 19 | 33 | core | 120 | 2 | 3 | A histogram | Noise, histograms, and the process behind the signal | Full |
+| 2.5 | The Normal Distribution | 26 | 40 | core | 91 | 2 | 3 | The normal distribution | Noise, histograms, and the process behind the signal | Full |
+| 2.6 | Digital Noise Generation | 29 | 43 | core | 107 | 2 | 3 | Signal versus process | Noise, histograms, and the process behind the signal | Full |
+| 2.7 | Precision and Accuracy | 32 | 46 | core | 111 | 0 | 3 | Quantization staircase | Noise, histograms, and the process behind the signal | Full |
+| 3.1 | Quantization | 35 | 73 | core | 136 | 3 | 3 | Quantization staircase | Sampling, aliasing, and quantization | Full |
+| 3.2 | The Sampling Theorem | 39 | 77 | core | 155 | 3 | 3 | Sampling and aliasing | Sampling, aliasing, and quantization | Full |
+| 3.3 | Digital-to-Analog Conversion | 44 | 82 | core | 122 | 1 | 3 | The signal chain | Sampling, aliasing, and quantization | Full |
+| 3.4 | Analog Filters for Data Conversion | 48 | 86 | core | 126 | 0 | 3 | The four filter responses | Sampling, aliasing, and quantization | Full |
+| 3.5 | Selecting The Antialias Filter | 55 | 93 | core | 141 | 0 | 3 | Aliasing in one picture | Sampling, aliasing, and quantization | Full |
+| 3.6 | Multirate Data Conversion | 58 | 96 | core | 126 | 1 | 3 | Multirate conversion | Sampling, aliasing, and quantization | Full |
+| 3.7 | Single Bit Data Conversion | 60 | 98 | advanced | 118 | 0 | 3 | Single-bit conversion | Explanation-only | Explanation-only |
+| 4.1 | Computer Numbers | 67 | 105 | core | 117 | 0 | 3 | Fixed and floating point | When arithmetic quietly drifts | Full |
+| 4.2 | Fixed Point (Integers) | 68 | 106 | core | 125 | 2 | 3 | Fixed and floating point | When arithmetic quietly drifts | Full |
+| 4.3 | Floating Point (Real Numbers) | 70 | 108 | core | 125 | 2 | 3 | Fixed and floating point | When arithmetic quietly drifts | Full |
+| 4.4 | Number Precision | 72 | 110 | core | 136 | 2 | 3 | Quantization error | When arithmetic quietly drifts | Full |
+| 4.5 | Execution Speed: Program Language | 76 | 114 | support | 119 | 0 | 3 | Where execution time goes | Explanation-only | Explanation-only |
+| 4.6 | Execution Speed: Hardware | 80 | 118 | support | 106 | 0 | 3 | Why a DSP is different | Explanation-only | Explanation-only |
+| 4.7 | Execution Speed: Programming Tips | 85 | 123 | support | 118 | 0 | 3 | Where execution time goes | Explanation-only | Explanation-only |
+| 5.1 | Signals and Systems | 87 | 125 | core | 129 | 1 | 3 | Superposition | Test a system for linearity | Full |
+| 5.2 | Requirements for Linearity | 89 | 127 | core | 109 | 3 | 3 | Superposition | Test a system for linearity | Full |
+| 5.3 | Static Linearity and Sinusoidal Fidelity | 92 | 130 | core | 118 | 2 | 3 | Superposition | Test a system for linearity | Full |
+| 5.4 | Examples of Linear and Nonlinear Systems | 94 | 132 | core | 148 | 0 | 3 | The four filter responses | Test a system for linearity | Full |
+| 5.5 | Special Properties of Linearity | 96 | 134 | core | 148 | 0 | 3 | Superposition | Test a system for linearity | Full |
+| 5.6 | Superposition: the Foundation of DSP | 98 | 136 | core | 129 | 0 | 3 | Superposition | Test a system for linearity | Full |
+| 5.7 | Common Decompositions | 100 | 138 | core | 127 | 2 | 3 | Convolution, visually | Test a system for linearity | Full |
+| 5.8 | Alternatives to Linearity | 104 | 142 | advanced | 138 | 0 | 3 | Nonlinear audio processing | Explanation-only | Explanation-only |
+| 6.1 | The Delta Function and Impulse Response | 107 | 145 | core | 113 | 2 | 3 | Convolution, visually | Convolution, step by step | Full |
+| 6.2 | Convolution | 108 | 146 | core | 98 | 3 | 3 | Convolution, visually | Convolution, step by step | Full |
+| 6.3 | The Input Side Algorithm | 112 | 150 | core | 123 | 1 | 3 | Convolution, visually | Convolution, step by step | Full |
+| 6.4 | The Output Side Algorithm | 116 | 154 | core | 123 | 1 | 3 | Convolution, visually | Convolution, step by step | Full |
+| 6.5 | The Sum of Weighted Inputs | 122 | 160 | core | 124 | 0 | 3 | Kernels are tiny programs | Convolution, step by step | Full |
+| 7.1 | Common Impulse Responses | 123 | 161 | core | 132 | 3 | 3 | Kernels are tiny programs | Kernels and correlation | Full |
+| 7.2 | Mathematical Properties | 132 | 170 | core | 110 | 3 | 3 | Convolution, visually | Kernels and correlation | Full |
+| 7.3 | Correlation | 136 | 174 | core | 116 | 2 | 3 | Correlation finds a delayed copy | Kernels and correlation | Full |
+| 7.4 | Speed | 140 | 178 | core | 126 | 2 | 3 | Convolution, visually | Kernels and correlation | Full |
+| 8.1 | The Family of Fourier Transform | 141 | 179 | core | 114 | 1 | 3 | Time and frequency views | Build a signal from DFT basis functions | Full |
+| 8.2 | Notation and Format of the Real DFT | 146 | 184 | core | 121 | 2 | 3 | The DFT is a bank of correlations | Build a signal from DFT basis functions | Full |
+| 8.3 | The Frequency Domain's Independent Variable | 148 | 186 | core | 119 | 2 | 3 | The DFT is a bank of correlations | Build a signal from DFT basis functions | Full |
+| 8.4 | DFT Basis Functions | 150 | 188 | core | 128 | 2 | 3 | The DFT is a bank of correlations | Build a signal from DFT basis functions | Full |
+| 8.5 | Synthesis, Calculating the Inverse DFT | 152 | 190 | core | 84 | 1 | 3 | The DFT is a bank of correlations | Build a signal from DFT basis functions | Full |
+| 8.6 | Analysis, Calculating the DFT | 157 | 195 | core | 95 | 2 | 3 | The DFT as a matrix | Build a signal from DFT basis functions | Full |
+| 8.7 | Duality | 161 | 199 | advanced | 120 | 0 | 3 | Two essential Fourier pairs | Explanation-only | Explanation-only |
+| 8.8 | Polar Notation | 161 | 199 | core | 76 | 2 | 3 | The complex plane | Build a signal from DFT basis functions | Full |
+| 8.9 | Polar Nuisances | 164 | 202 | core | 140 | 0 | 4 | Phase and group delay | Build a signal from DFT basis functions | Full |
+| 9.1 | Spectral Analysis of Signals | 169 | 207 | core | 138 | 2 | 3 | Windows and leakage | Windows, leakage, and convolution | Full |
+| 9.2 | Frequency Response of Systems | 177 | 215 | core | 133 | 2 | 3 | A spectrogram | Windows, leakage, and convolution | Full |
+| 9.3 | Convolution via the Frequency Domain | 180 | 218 | core | 99 | 2 | 3 | Convolution, visually | Windows, leakage, and convolution | Full |
+| 10.1 | Linearity of the Fourier Transform | 185 | 223 | core | 124 | 1 | 3 | Time and frequency views | Shift, scale, modulate, and check Parseval | Full |
+| 10.2 | Characteristics of the Phase | 188 | 226 | core | 123 | 2 | 3 | Phase and group delay | Shift, scale, modulate, and check Parseval | Full |
+| 10.3 | Periodic Nature of the DFT | 194 | 232 | core | 131 | 0 | 3 | Windows and leakage | Shift, scale, modulate, and check Parseval | Full |
+| 10.4 | Compression and Expansion, Multirate methods | 200 | 238 | core | 111 | 2 | 3 | Sampling copies the spectrum | Shift, scale, modulate, and check Parseval | Full |
+| 10.5 | Multiplying Signals (Amplitude Modulation) | 204 | 242 | core | 116 | 2 | 3 | Time and frequency views | Shift, scale, modulate, and check Parseval | Full |
+| 10.6 | The Discrete Time Fourier Transform | 206 | 244 | advanced | 97 | 2 | 3 | Continuous and discrete worlds | Shift, scale, modulate, and check Parseval | Full |
+| 10.7 | Parseval's Relation | 208 | 246 | core | 88 | 1 | 3 | The complex plane | Shift, scale, modulate, and check Parseval | Full |
+| 11.1 | Delta Function Pairs | 209 | 247 | core | 104 | 2 | 3 | The sinc function | Shapes and their spectra | Full |
+| 11.2 | The Sinc Function | 212 | 250 | core | 110 | 2 | 3 | The sinc function | Shapes and their spectra | Full |
+| 11.3 | Other Transform Pairs | 215 | 253 | core | 115 | 2 | 3 | Two essential Fourier pairs | Shapes and their spectra | Full |
+| 11.4 | Gibbs Effect | 218 | 256 | core | 132 | 0 | 3 | Window functions | Shapes and their spectra | Full |
+| 11.5 | Harmonics | 220 | 258 | core | 114 | 2 | 3 | A spectrogram | Shapes and their spectra | Full |
+| 11.6 | Chirp Signals | 222 | 260 | advanced | 126 | 2 | 3 | A chirp waveform | Shapes and their spectra | Full |
+| 12.1 | Real DFT Using the Complex DFT | 225 | 263 | core | 123 | 2 | 3 | The DFT as a matrix | Inside the butterfly | Full |
+| 12.2 | How the FFT works | 228 | 266 | core | 121 | 3 | 3 | The FFT butterfly | Inside the butterfly | Full |
+| 12.3 | FFT Programs | 233 | 271 | support | 119 | 0 | 3 | The FFT butterfly | Explanation-only | Explanation-only |
+| 12.4 | Speed and Precision Comparisons | 237 | 275 | core | 126 | 2 | 3 | Where execution time goes | Inside the butterfly | Full |
+| 12.5 | Further Speed Increases | 238 | 276 | advanced | 108 | 0 | 3 | The FFT butterfly | Explanation-only | Explanation-only |
+| 13.1 | The Delta Function | 243 | 281 | core | 121 | 2 | 3 | Continuous and discrete worlds | From continuous to discrete | Full |
+| 13.2 | Convolution | 246 | 284 | core | 110 | 2 | 3 | Convolution, visually | From continuous to discrete | Full |
+| 13.3 | The Fourier Transform | 252 | 290 | core | 106 | 2 | 3 | Two essential Fourier pairs | From continuous to discrete | Full |
+| 13.4 | The Fourier Series | 255 | 293 | core | 107 | 2 | 3 | Two essential Fourier pairs | From continuous to discrete | Full |
+| 14.1 | Filter Basics | 261 | 299 | core | 142 | 0 | 3 | The four filter responses | The filter design trade space | Full |
+| 14.2 | How Information is Represented in Signals | 265 | 303 | core | 132 | 0 | 3 | What the ear actually hears | The filter design trade space | Full |
+| 14.3 | Time Domain Parameters | 266 | 304 | core | 122 | 2 | 3 | Phase and group delay | The filter design trade space | Full |
+| 14.4 | Frequency Domain Parameters | 268 | 306 | core | 128 | 2 | 3 | Filter families | The filter design trade space | Full |
+| 14.5 | High-Pass, Band-Pass and Band-Reject Filters | 271 | 309 | core | 119 | 2 | 3 | The four filter responses | The filter design trade space | Full |
+| 14.6 | Filter Classification | 274 | 312 | core | 144 | 0 | 4 | Four filters, one cutoff | The filter design trade space | Full |
+| 15.1 | Implementation by Convolution | 277 | 315 | core | 119 | 3 | 3 | Moving average | Noise versus edge sharpness | Full |
+| 15.2 | Noise Reduction vs. Step Response | 278 | 316 | core | 134 | 2 | 3 | Moving-average smoothing | Noise versus edge sharpness | Full |
+| 15.3 | Frequency Response | 280 | 318 | core | 117 | 3 | 3 | Moving average | Noise versus edge sharpness | Full |
+| 15.4 | Relatives of the Moving Average Filter | 280 | 318 | support | 139 | 0 | 4 | Moving-average smoothing | Explanation-only | Explanation-only |
+| 15.5 | Recursive Implementation | 282 | 320 | core | 123 | 2 | 3 | Moving-average smoothing | Noise versus edge sharpness | Full |
+| 16.1 | Strategy of the Windowed-Sinc | 285 | 323 | core | 134 | 2 | 4 | Windowed-sinc design | Design a windowed-sinc filter | Full |
+| 16.2 | Designing the Filter | 288 | 326 | core | 129 | 3 | 4 | Windowed-sinc design | Design a windowed-sinc filter | Full |
+| 16.3 | Examples of Windowed-Sinc Filters | 292 | 330 | core | 154 | 0 | 3 | The sinc function | Design a windowed-sinc filter | Full |
+| 16.4 | Pushing it to the Limit | 293 | 331 | advanced | 144 | 0 | 4 | Window functions | Explanation-only | Explanation-only |
+| 17.1 | Arbitrary Frequency Response | 297 | 335 | core | 140 | 2 | 3 | FIR filter structure | Draw a response, get a filter | Full |
+| 17.2 | Deconvolution | 300 | 338 | advanced | 128 | 2 | 3 | Deconvolution is risky | Draw a response, get a filter | Full |
+| 17.3 | Optimal Filters | 307 | 345 | advanced | 126 | 2 | 4 | Four filters, one cutoff | Draw a response, get a filter | Full |
+| 18.1 | The Overlap-Add Method | 311 | 349 | core | 130 | 2 | 3 | Overlap-add convolution | Overlap-add, block by block | Full |
+| 18.2 | FFT Convolution | 312 | 350 | core | 121 | 2 | 3 | The FFT butterfly | Overlap-add, block by block | Full |
+| 18.3 | Speed Improvements | 316 | 354 | advanced | 134 | 0 | 4 | Overlap-add convolution | Explanation-only | Explanation-only |
+| 19.1 | The Recursive Method | 319 | 357 | core | 123 | 2 | 3 | Recursive filtering | Single-pole filters and stability | Full |
+| 19.2 | Single Pole Recursive Filters | 322 | 360 | core | 125 | 3 | 4 | Recursive filtering | Single-pole filters and stability | Full |
+| 19.3 | Narrow-band Filters | 326 | 364 | advanced | 151 | 0 | 3 | The z-plane | Explanation-only | Explanation-only |
+| 19.4 | Phase Response | 328 | 366 | core | 145 | 0 | 4 | Phase and group delay | Single-pole filters and stability | Full |
+| 19.5 | Using Integers | 332 | 370 | advanced | 125 | 0 | 4 | Fixed and floating point | Explanation-only | Explanation-only |
+| 20.1 | The Chebyshev and Butterworth Responses | 333 | 371 | core | 139 | 2 | 3 | Chebyshev versus Butterworth | Ripple, order, and overshoot | Full |
+| 20.2 | Designing the Filter | 334 | 372 | core | 140 | 2 | 3 | Chebyshev response | Ripple, order, and overshoot | Full |
+| 20.3 | Step Response Overshoot | 338 | 376 | core | 129 | 0 | 3 | Phase and group delay | Ripple, order, and overshoot | Full |
+| 20.4 | Stability | 339 | 377 | advanced | 156 | 1 | 3 | The z-plane | Ripple, order, and overshoot | Full |
+| 21.1 | Match #1:  Analog vs. Digital Filters | 343 | 381 | core | 136 | 0 | 3 | Filter families | Four filters, one specification | Full |
+| 21.2 | Match #2:  Windowed-Sinc vs. Chebyshev | 346 | 384 | core | 138 | 0 | 3 | Four filters, one cutoff | Four filters, one specification | Full |
+| 21.3 | Match #3:  Moving Average vs. Single Pole | 348 | 386 | core | 149 | 0 | 3 | Moving average | Four filters, one specification | Full |
+| 22.1 | Human Hearing | 351 | 389 | core | 146 | 0 | 3 | Anatomy of the ear | Hearing, companding, and data rate | Full |
+| 22.2 | Timbre | 355 | 393 | core | 114 | 0 | 3 | The cochlea | Hearing, companding, and data rate | Full |
+| 22.3 | Sound Quality vs. Data Rate | 358 | 396 | core | 118 | 1 | 3 | PCM and DSD | Hearing, companding, and data rate | Full |
+| 22.4 | High Fidelity Audio | 359 | 397 | core | 118 | 0 | 3 | Compact disc | Hearing, companding, and data rate | Full |
+| 22.5 | Companding | 362 | 400 | core | 129 | 2 | 3 | PCM and DSD | Hearing, companding, and data rate | Full |
+| 22.6 | Speech Synthesis and Recognition | 364 | 402 | core | 132 | 0 | 3 | What the ear actually hears | Hearing, companding, and data rate | Full |
+| 22.7 | Nonlinear Audio Processing | 368 | 406 | advanced | 132 | 0 | 4 | Nonlinear audio processing | Explanation-only | Explanation-only |
+| 23.1 | Digital Image Structure | 373 | 411 | core | 144 | 2 | 3 | An image is a sampled 2-D signal | Pixels, brightness, and warping | Full |
+| 23.2 | Cameras and Eyes | 376 | 414 | core | 132 | 0 | 3 | Camera sensor | Pixels, brightness, and warping | Full |
+| 23.3 | Television Video Signals | 384 | 422 | support | 127 | 0 | 3 | Video is a scanned signal | Explanation-only | Explanation-only |
+| 23.4 | Other Image Acquisition and Display | 386 | 424 | support | 115 | 0 | 3 | An MRI scanner | Explanation-only | Explanation-only |
+| 23.5 | Brightness and Contrast Adjustments | 387 | 425 | core | 111 | 2 | 3 | A histogram | Pixels, brightness, and warping | Full |
+| 23.6 | Grayscale Transforms | 390 | 428 | core | 120 | 0 | 3 | A histogram | Pixels, brightness, and warping | Full |
+| 23.7 | Warping | 394 | 432 | core | 125 | 1 | 3 | An image is a sampled 2-D signal | Pixels, brightness, and warping | Full |
+| 24.1 | Convolution | 397 | 435 | core | 116 | 2 | 3 | 2-D convolution | Kernels, separability, and spectra | Full |
+| 24.2 | 3×3 Edge Modification | 402 | 440 | core | 110 | 3 | 3 | 2-D convolution | Kernels, separability, and spectra | Full |
+| 24.3 | Convolution by Separability | 404 | 442 | core | 118 | 2 | 3 | 2-D convolution | Kernels, separability, and spectra | Full |
+| 24.4 | Example of a Large PSF: Illumination Flattening | 407 | 445 | core | 125 | 2 | 3 | 2-D convolution | Kernels, separability, and spectra | Full |
+| 24.5 | Fourier Image Analysis | 410 | 448 | core | 128 | 0 | 3 | Images have spatial spectra | Kernels, separability, and spectra | Full |
+| 24.6 | FFT Convolution | 416 | 454 | core | 105 | 1 | 3 | The FFT butterfly | Kernels, separability, and spectra | Full |
+| 24.7 | A Closer Look at Image Convolution | 418 | 456 | advanced | 127 | 0 | 4 | A kernel sliding over a grid | Explanation-only | Explanation-only |
+| 25.1 | Spatial Resolution | 423 | 461 | core | 133 | 2 | 3 | An image is a sampled 2-D signal | Resolution, morphology, and CT | Full |
+| 25.2 | Sample Spacing and Sampling Aperture | 430 | 468 | core | 134 | 0 | 3 | Bayer color mosaic | Resolution, morphology, and CT | Full |
+| 25.3 | Signal-to-Noise Ratio | 432 | 470 | core | 126 | 2 | 3 | A histogram | Resolution, morphology, and CT | Full |
+| 25.4 | Morphological Image Processing | 436 | 474 | core | 124 | 2 | 3 | Morphological processing | Resolution, morphology, and CT | Full |
+| 25.5 | Computed Tomography | 442 | 480 | advanced | 139 | 2 | 3 | Computed tomography | Resolution, morphology, and CT | Full |
+| 26.1 | Target Detection | 451 | 489 | core | 134 | 2 | 3 | A feedforward network | Train a perceptron | Full |
+| 26.2 | Neural Network Architecture | 458 | 496 | core | 135 | 2 | 3 | A feedforward network | Train a perceptron | Full |
+| 26.3 | Why Does It Work? | 463 | 501 | core | 123 | 0 | 3 | A feedforward network | Train a perceptron | Full |
+| 26.4 | Training the Neural Network | 465 | 503 | core | 132 | 2 | 3 | A perceptron | Train a perceptron | Full |
+| 26.5 | Evaluating the Results | 473 | 511 | core | 122 | 2 | 3 | A perceptron | Train a perceptron | Full |
+| 26.6 | Recursive Filter Design | 476 | 514 | advanced | 144 | 0 | 3 | A feedforward network | Explanation-only | Explanation-only |
+| 27.1 | Data Compression Strategies | 481 | 519 | core | 116 | 2 | 3 | The compression pipeline | Compress text and images | Full |
+| 27.2 | Run-Length Encoding | 483 | 521 | core | 116 | 0 | 3 | The compression pipeline | Compress text and images | Full |
+| 27.3 | Huffman Encoding | 484 | 522 | core | 126 | 2 | 3 | A Huffman tree | Compress text and images | Full |
+| 27.4 | Delta Encoding | 486 | 524 | core | 111 | 2 | 3 | The compression pipeline | Compress text and images | Full |
+| 27.5 | LZW Compression | 488 | 526 | core | 126 | 0 | 3 | The compression pipeline | Compress text and images | Full |
+| 27.6 | JPEG (Transform Compression) | 494 | 532 | core | 120 | 2 | 3 | JPEG transform compression | Compress text and images | Full |
+| 27.7 | MPEG | 501 | 539 | core | 122 | 0 | 3 | MPEG video compression | Compress text and images | Full |
+| 28.1 | How DSPs are Different from Other Microprocessors | 503 | 541 | core | 126 | 0 | 3 | Why a DSP is different | Circular buffers and the MAC loop | Full |
+| 28.2 | Circular Buffering | 506 | 544 | core | 140 | 2 | 3 | Circular buffering | Circular buffers and the MAC loop | Full |
+| 28.3 | Architecture of the Digital Signal Processor | 509 | 547 | support | 126 | 0 | 3 | Why a DSP is different | Explanation-only | Explanation-only |
+| 28.4 | Fixed versus Floating Point | 514 | 552 | core | 132 | 0 | 3 | Fixed and floating point | Circular buffers and the MAC loop | Full |
+| 28.5 | C versus Assembly | 520 | 558 | support | 120 | 0 | 3 | Where execution time goes | Explanation-only | Explanation-only |
+| 28.6 | How Fast are DSPs? | 526 | 564 | support | 129 | 2 | 3 | Real time is a deadline | Circular buffers and the MAC loop | Full |
+| 28.7 | The Digital Signal Processor Market | 531 | 569 | support | 116 | 0 | 3 | The implementation landscape | Explanation-only | Explanation-only |
+| 29.1 | The ADSP-2106x family | 535 | 573 | support | 129 | 0 | 3 | Why a DSP is different | Explanation-only | Explanation-only |
+| 29.2 | The SHARC EZ-KIT Lite | 537 | 575 | support | 120 | 0 | 3 | An ADC die | Explanation-only | Explanation-only |
+| 29.3 | Design Example: An FIR Audio Filter | 538 | 576 | core | 143 | 1 | 3 | FIR filter structure | Size a real-time FIR audio filter | Full |
+| 29.4 | Analog measurements on a DSP system | 542 | 580 | core | 116 | 0 | 3 | Real time is a deadline | Size a real-time FIR audio filter | Full |
+| 29.5 | Another Look at Fixed versus Floating Point | 544 | 582 | core | 128 | 0 | 3 | Fixed and floating point | Size a real-time FIR audio filter | Full |
+| 29.6 | Advanced Software Tools | 546 | 584 | support | 108 | 0 | 3 | Where execution time goes | Explanation-only | Explanation-only |
+| 30.1 | The Complex Number System | 551 | 589 | core | 99 | 3 | 3 | The complex plane | Rotate, multiply, and filter | Full |
+| 30.2 | Polar Notation | 555 | 593 | core | 94 | 3 | 3 | The complex plane | Rotate, multiply, and filter | Full |
+| 30.3 | Using Complex Numbers by Substitution | 557 | 595 | core | 107 | 2 | 3 | The complex plane | Rotate, multiply, and filter | Full |
+| 30.4 | Complex Representation of Sinusoids | 559 | 597 | core | 112 | 2 | 3 | Time and frequency views | Rotate, multiply, and filter | Full |
+| 30.5 | Complex Representation of Systems | 561 | 599 | core | 112 | 2 | 3 | The complex plane | Rotate, multiply, and filter | Full |
+| 30.6 | Electrical Circuit Analysis | 563 | 601 | support | 114 | 2 | 3 | The four filter responses | Rotate, multiply, and filter | Full |
+| 31.1 | The Real DFT | 567 | 605 | core | 113 | 1 | 3 | The DFT is a bank of correlations | The complex spectrum, including negative frequencies | Full |
+| 31.2 | Mathematical Equivalence | 569 | 607 | core | 114 | 2 | 3 | The DFT as a matrix | The complex spectrum, including negative frequencies | Full |
+| 31.3 | The Complex DFT | 570 | 608 | core | 100 | 2 | 3 | The DFT as a matrix | The complex spectrum, including negative frequencies | Full |
+| 31.4 | The Family of Fourier Transforms | 575 | 613 | core | 112 | 0 | 3 | Time and frequency views | The complex spectrum, including negative frequencies | Full |
+| 31.5 | Why the Complex Fourier Transform is Used | 577 | 615 | core | 115 | 0 | 4 | The complex plane | The complex spectrum, including negative frequencies | Full |
+| 32.1 | The Nature of the s-Domain | 581 | 619 | core | 103 | 2 | 3 | From s-plane to z-plane | Poles, zeros, and the s-plane | Full |
+| 32.2 | Strategy of the Laplace Transform | 588 | 626 | core | 102 | 2 | 3 | From s-plane to z-plane | Poles, zeros, and the s-plane | Full |
+| 32.3 | Analysis of Electric Circuits | 592 | 630 | core | 99 | 2 | 3 | The four filter responses | Poles, zeros, and the s-plane | Full |
+| 32.4 | The Importance of Poles and Zeros | 597 | 635 | core | 124 | 2 | 4 | The z-plane | Poles, zeros, and the s-plane | Full |
+| 32.5 | Filter Design in the s-Domain | 600 | 638 | advanced | 134 | 3 | 4 | Chebyshev versus Butterworth | Poles, zeros, and the s-plane | Full |
+| 33.1 | The Nature of the z-Domain | 605 | 643 | core | 130 | 3 | 3 | The z-plane | Poles, zeros, and digital stability | Full |
+| 33.2 | Analysis of Recursive Systems | 610 | 648 | core | 111 | 3 | 3 | Recursive filtering | Poles, zeros, and digital stability | Full |
+| 33.3 | Cascade and Parallel Stages | 616 | 654 | core | 112 | 2 | 3 | Four filters, one cutoff | Poles, zeros, and digital stability | Full |
+| 33.4 | Spectral Inversion | 619 | 657 | core | 116 | 2 | 3 | The four filter responses | Poles, zeros, and digital stability | Full |
+| 33.5 | Gain Changes | 621 | 659 | core | 122 | 2 | 3 | Fixed and floating point | Poles, zeros, and digital stability | Full |
+| 33.6 | Chebyshev-Butterworth Filter Design | 623 | 661 | advanced | 130 | 2 | 3 | From s-plane to z-plane | Poles, zeros, and digital stability | Full |
+| 33.7 | The Best and Worst of DSP | 630 | 668 | core | 135 | 0 | 4 | The complex plane | Poles, zeros, and digital stability | Full |
 
 ## Prerequisite map
 

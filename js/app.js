@@ -12,6 +12,7 @@ import {
 } from './ui.js';
 import { buildIndex, search, renderResults } from './search.js';
 import { glossary } from './data/glossary.js';
+import { visuals, visualList, chapterVisuals } from './data/visuals.js';
 import { mountLab } from './viz/labs.js';
 
 const main = document.getElementById('main');
@@ -209,10 +210,12 @@ function renderRoute() {
   if (!segs.length || segs[0] === 'home') out = renderHome();
   else if (segs[0] === 'contents') out = renderContents(route.query);
   else if (segs[0] === 'labs') out = renderLabGallery();
+  else if (segs[0] === 'visuals') out = renderVisualIndex();
   else if (segs[0] === 'chapter') out = renderChapterRoute(segs, route.query);
   else if (segs[0] === 'glossary') out = renderGlossary(route.query);
   else if (segs[0] === 'formulas') out = renderFormulas(route.query);
   else if (segs[0] === 'source') out = renderSource(route.query);
+  else if (segs[0] === 'reader') out = renderReader(route.query);
   else if (segs[0] === 'map') out = renderMap();
   else if (segs[0] === 'review') out = renderReview();
   else if (segs[0] === 'bookmarks') out = renderBookmarks();
@@ -282,7 +285,7 @@ function renderHome() {
           <div class="hero-meta">
             <div><strong>${g.chapters}</strong><span>chapters</span></div>
             <div><strong>${g.sections}</strong><span>concepts</span></div>
-            <div><strong>33</strong><span>interactive labs</span></div>
+            <div><strong>${chapters.reduce((n, c) => n + c.labs.length, 0)}</strong><span>interactive labs</span></div>
             <div><strong>${g.quizAvg ? Math.round(g.quizAvg * 100) + '%' : '—'}</strong><span>quiz average</span></div>
             <div><strong>${Math.max(1, hours)}h</strong><span>guided study</span></div>
           </div>
@@ -351,7 +354,7 @@ function renderHome() {
           <p class="muted small">The course is mapped section-by-section to the 688-page source PDF, including book page and PDF page numbers. 185/185 sections have authored explanations; 235 formulas and 100 questions make the coverage checkable.</p>
           <div class="trace-summary" style="grid-template-columns:repeat(2,1fr);margin-bottom:14px">
             <div class="stat-card"><div class="num">185</div><div class="lbl">Sections indexed</div></div>
-            <div class="stat-card"><div class="num">33</div><div class="lbl">Interactive labs</div></div>
+            <div class="stat-card"><div class="num">${chapters.reduce((n, c) => n + c.labs.length, 0)}</div><div class="lbl">Interactive labs</div></div>
           </div>
           <div class="row"><a class="btn" href="#/source">${icon('source', 15)} Traceability matrix</a><a class="btn btn-ghost" href="#/glossary">Glossary ${icon('arrow', 14)}</a></div>
         </div>
@@ -444,6 +447,61 @@ function renderLabGallery() {
         }).join('')}
       </div>
       <div class="panel panel-tip" style="margin-top:18px"><div class="callout-title">How the labs are built</div><p class="small" style="margin:0">The labs use Canvas 2D, SVG, and a dependency-free numerical engine. All numerical readouts come from the same functions tested by the unit suite. There is no 3D scene: DSP is primarily a 2D signal/geometry subject, and 2D plots communicate the mechanisms more accurately and cheaply.</p></div>`,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* Visual index                                                        */
+/* ------------------------------------------------------------------ */
+
+function renderVisualIndex() {
+  const unique = [];
+  const seen = new Set();
+  for (const v of Object.values(visuals)) {
+    if (!seen.has(v.src)) { seen.add(v.src); unique.push(v); }
+  }
+  unique.sort((a, b) => (a.kind === b.kind ? a.title.localeCompare(b.title) : a.kind === 'diagram' ? -1 : 1));
+  const usage = (v) => chapters.filter((c) => c.sections.some((s) => s.visual && s.visual.src === v.src)).map((c) => c.number);
+  return {
+    title: 'Visual index',
+    html: `${pageHead('Visual library', 'Every figure, in one place', 'Original diagrams and openly licensed photographs used to make the concepts visible. Click any figure to enlarge it; the credit and license are shown with each image.')}
+      <div class="ref-toolbar">
+        <span class="chip active" data-visual-filter="all" role="button" tabindex="0">All ${unique.length}</span>
+        <span class="chip" data-visual-filter="diagram" role="button" tabindex="0">Original diagrams ${unique.filter((v) => v.kind === 'diagram').length}</span>
+        <span class="chip" data-visual-filter="image" role="button" tabindex="0">Licensed images ${unique.filter((v) => v.kind === 'image').length}</span>
+        <span class="tiny muted">Images are local; no requests leave this device after loading.</span>
+      </div>
+      <div class="visual-grid" id="visual-grid">
+        ${unique.map((v) => {
+          const used = usage(v);
+          const credit = v.kind === 'diagram' ? `Original · ${v.license}` : `${v.credit} · ${v.license}`;
+          return `<article class="visual-card" data-visual-kind="${v.kind}" data-visual-search="${esc((v.title + ' ' + v.caption).toLowerCase())}">
+            <button class="visual-thumb" data-image-open type="button" data-src="${esc(visualSource(v))}" data-title="${esc(v.title)}" data-caption="${esc(v.caption)}" data-credit="${esc(credit)}" data-page="${esc(v.page || '')}" data-kind="${esc(v.kind)}" aria-label="Enlarge ${esc(v.title)}">
+              <img src="${esc(visualSource(v))}" alt="${esc(v.alt || v.caption)}" loading="lazy" decoding="async" />
+            </button>
+            <div class="visual-body">
+              <h3>${esc(v.title)}</h3>
+              <p>${esc(v.caption)}</p>
+              <div class="visual-credit">${credit}${v.kind === 'image' ? ` · <a href="${esc(v.page)}" target="_blank" rel="noopener">source</a>` : ''}</div>
+              ${used.length ? `<div class="visual-use">Used in ${used.slice(0, 6).map((n) => `Ch. ${n}`).join(', ')}${used.length > 6 ? '…' : ''}</div>` : ''}
+            </div>
+          </article>`;
+        }).join('')}
+      </div>
+      <div class="panel panel-tip" style="margin-top:18px"><div class="callout-title">Source and license policy</div><p class="small" style="margin:0">The book's prose and figures are copyrighted and are not reproduced here. Source-page links open the user's local PDF. Downloaded images are from Wikimedia Commons under the licenses shown; original diagrams were created for this course under CC BY 4.0. Every image is stored locally and can be enlarged.</p></div>`,
+    after(root) {
+      const cards = [...root.querySelectorAll('.visual-card')];
+      root.querySelectorAll('[data-visual-filter]').forEach((chip) => {
+        const run = () => {
+          root.querySelectorAll('[data-visual-filter]').forEach((c) => c.classList.remove('active'));
+          chip.classList.add('active');
+          const f = chip.dataset.visualFilter;
+          cards.forEach((c) => { c.style.display = f === 'all' || c.dataset.visualKind === f ? '' : 'none'; });
+        };
+        chip.addEventListener('click', run);
+        chip.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); run(); } });
+      });
+    },
   };
 }
 
@@ -558,6 +616,36 @@ function renderLearn(ch, section) {
     </div>`;
 }
 
+function visualSource(v) {
+  const reduced = getState().prefs.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return v.poster && reduced ? v.poster : v.src;
+}
+
+function renderConceptFigure(v, s) {
+  if (!v) return '';
+  const creditText = v.kind === 'diagram'
+    ? `Original diagram for DSP Fieldbook · ${v.license}`
+    : `Image: ${v.credit} · ${v.license}`;
+  const creditLink = v.kind === 'image' && v.page
+    ? ` · <a href="${esc(v.page)}" target="_blank" rel="noopener">source file</a>`
+    : '';
+  const animated = /\.gif$/i.test(v.src);
+  const reduced = getState().prefs.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return `<figure class="concept-figure">
+    <button class="figure-open" data-image-open type="button"
+      data-src="${esc(visualSource(v))}" data-title="${esc(v.title)}"
+      data-caption="${esc(v.caption)}" data-credit="${esc(creditText)}"
+      data-page="${esc(v.page || '')}" data-kind="${esc(v.kind)}"
+      aria-label="Open larger figure: ${esc(v.title)}">
+      <img src="${esc(visualSource(v))}" alt="${esc(v.alt || v.caption)}" loading="lazy" decoding="async" />
+      ${animated ? `<span class="figure-badge">${reduced ? 'animated · still' : 'animated'}</span>` : ''}
+      <span class="figure-zoom">View larger</span>
+    </button>
+    <figcaption class="figure-caption"><strong>${esc(v.title)}.</strong> ${rich(v.caption)}</figcaption>
+    <div class="figure-credit">${esc(creditText)}${creditLink}</div>
+  </figure>`;
+}
+
 function renderConcept(ch, s, i, deep) {
   const sState = getState();
   const studied = !!sState.studied[s.id];
@@ -576,6 +664,7 @@ function renderConcept(ch, s, i, deep) {
     </header>
     <div class="concept-body">
       <p class="intuition">${rich(s.intuition)}</p>
+      ${s.visual ? renderConceptFigure(s.visual, s) : ''}
       ${s.formulas?.length ? `<div class="formula-stack">${s.formulas.map((f) => renderFormula(f)).join('')}</div>` : ''}
       <details class="tech-detail" ${deep ? 'open' : ''}>
         <summary>Technical detail</summary>
@@ -832,7 +921,7 @@ function renderChapterSource(ch) {
           <td class="src-page"><a href="source/Guide_to_Digital_Signal_Process.pdf#page=${s.pdfPage}" target="_blank" rel="noopener" title="Open the source PDF at this page">p. ${s.bookPage}</a><br><span style="color:var(--faint)">PDF ${s.pdfPage}</span></td>
           <td><strong>${s.id}</strong> ${esc(s.title)}</td>
           <td><a href="#/chapter/${ch.number}/learn/${s.id}">Explanation${s.formulas.length ? ` + ${s.formulas.length} formula${s.formulas.length > 1 ? 's' : ''}` : ''}</a></td>
-          <td>${labRelevant(ch, s) && ch.labs.length ? `<a href="#/chapter/${ch.number}/lab">${esc(ch.labs[0].title)}</a>` : '<span class="muted">Diagram / explanation</span>'}</td>
+          <td><a href="#/chapter/${ch.number}/learn/${s.id}">${esc(s.visual?.title || 'Figure')}</a>${labRelevant(ch, s) && ch.labs.length ? `<br><span class="tiny muted">Lab: ${esc(ch.labs[0].title)}</span>` : ''}</td>
           <td>${ch.quiz.length ? `${ch.quiz.length} chapter questions` : '—'}</td>
           <td class="status"><span class="status-pill status-${traceStatus(ch, s)}">${traceStatusLabel(traceStatus(ch, s))}</span></td>
         </tr>`).join('')}
@@ -975,6 +1064,46 @@ function renderFormulas(query) {
       };
       input?.addEventListener('input', filter);
       if (q) filter();
+    },
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* Source reader                                                       */
+/* ------------------------------------------------------------------ */
+
+function renderReader(query) {
+  const initial = Math.max(1, Math.min(688, +(query.get('page') || 1)));
+  return {
+    title: 'Source reader',
+    html: `${pageHead('Original pages', 'Source reader', 'The supplied PDF in its original context. This is the user’s local copy; the app does not redistribute or reproduce the book’s copyrighted prose or figures as its own content.')}
+      <div class="panel panel-warn" style="margin-bottom:14px"><div class="callout-title">Copyright note</div><p class="small" style="margin:0">The book is copyrighted. This reader exists so the learner can compare the authored explanations with the original pages they already possess. It is not a substitute for the book and does not grant redistribution rights.</p></div>
+      <div class="ref-toolbar">
+        <label class="ref-search" style="flex:0 1 300px">${icon('source', 15)}<input id="reader-page" type="number" min="1" max="688" value="${initial}" aria-label="PDF page" /></label>
+        <button class="btn btn-primary btn-sm" data-action="reader-go">Open page</button>
+        <select id="reader-chapter" class="btn btn-sm" aria-label="Jump to chapter">
+          ${chapters.map((c) => `<option value="${c.pdfStart}">Ch. ${c.number} · ${esc(c.title)} (PDF p. ${c.pdfStart})</option>`).join('')}
+        </select>
+        <a class="btn btn-sm" href="source/Guide_to_Digital_Signal_Process.pdf#page=${initial}" target="_blank" rel="noopener">${icon('external', 14)} Open in a new tab</a>
+      </div>
+      <div class="pdf-frame-wrap">
+        <iframe id="pdf-frame" title="Original source PDF" src="source/Guide_to_Digital_Signal_Process.pdf#page=${initial}&view=FitH"></iframe>
+      </div>
+      <p class="tiny muted" style="margin-top:10px">If the browser does not display the embedded PDF, use “Open in a new tab”. The reader is intentionally loaded only on this page to keep the rest of the app light.</p>`,
+    after(root) {
+      const frame = root.querySelector('#pdf-frame');
+      const pageInput = root.querySelector('#reader-page');
+      const chapterSelect = root.querySelector('#reader-chapter');
+      const go = () => {
+        const p = Math.max(1, Math.min(688, Number(pageInput.value) || 1));
+        frame.src = `source/Guide_to_Digital_Signal_Process.pdf#page=${p}&view=FitH`;
+      };
+      root.querySelector('[data-action="reader-go"]')?.addEventListener('click', go);
+      pageInput?.addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); });
+      chapterSelect?.addEventListener('change', () => {
+        pageInput.value = chapterSelect.value;
+        go();
+      });
     },
   };
 }
@@ -1215,6 +1344,24 @@ function renderQuizCenter() {
 /* ------------------------------------------------------------------ */
 
 document.addEventListener('click', (e) => {
+  const fig = e.target.closest('[data-image-open]');
+  if (fig) {
+    e.preventDefault();
+    const img = document.getElementById('image-large');
+    const title = document.getElementById('image-title');
+    const cap = document.getElementById('image-caption');
+    const cred = document.getElementById('image-credit');
+    if (!img || !title || !cap || !cred) return;
+    img.src = fig.dataset.src;
+    img.alt = fig.dataset.title || 'Figure';
+    title.textContent = fig.dataset.title || 'Figure';
+    cap.textContent = fig.dataset.caption || '';
+    const page = fig.dataset.page || '';
+    const isImage = fig.dataset.kind === 'image';
+    cred.innerHTML = `${esc(fig.dataset.credit || '')}${isImage && page ? ` · <a href="${esc(page)}" target="_blank" rel="noopener">Wikimedia Commons file page</a>` : ''}`;
+    openModal('image-modal');
+    return;
+  }
   const actionEl = e.target.closest('[data-action]');
   if (!actionEl) return;
   e.preventDefault();
@@ -1410,4 +1557,4 @@ function onGlobalKey(e) {
 init();
 
 /* Expose a tiny debug surface for browser tests and curious learners. */
-window.__dsp = { chapters, validateContent, getState, traceStatus, allFormulas, quizSessions };
+window.__dsp = { chapters, validateContent, getState, traceStatus, allFormulas, quizSessions, visuals, visualList, chapterVisuals };

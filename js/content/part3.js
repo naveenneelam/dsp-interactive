@@ -760,6 +760,15 @@ This chapter starts with the difference equation, derives the single-pole low-pa
         'Compare the low-pass and high-pass outputs on a signal with drift plus a high-frequency burst.',
         'Move the pole outside the unit circle. What happens to the output?',
       ],
+    }, {
+      id: 'resonator',
+      title: 'Biquad resonator: poles, bandwidth, and ringing',
+      intro: 'Place a complex-conjugate pole pair in the z-plane. See how radius controls bandwidth, Q, and ringing, and how crossing the unit circle causes instability.',
+      tasks: [
+        'Move the pole radius from 0.8 to 0.99. How do bandwidth and Q change?',
+        'Change the resonant frequency. Does the peak move as predicted?',
+        'Push the pole outside the unit circle. What happens to the impulse response?',
+      ],
     }],
     worked: {
       title: 'Design a single-pole low-pass at 20 Hz',
